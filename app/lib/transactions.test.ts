@@ -2,6 +2,8 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   EXPENSE_CATEGORIES,
   findRecurringPayments,
+  getMonthlyCost,
+  normalizeMerchant,
   formatMonth,
   getLocalDateString,
   getMonthKey,
@@ -112,7 +114,7 @@ describe("findRecurringPayments", () => {
         category: "Entertainment",
         amount: 15,
         frequency: "Monthly",
-        nextDate: "2026-05-05",
+        lastDate: "2026-04-05",
         occurrences: 4,
       },
     ]);
@@ -127,6 +129,7 @@ describe("findRecurringPayments", () => {
         tx("b2", "2026-01-15", { description: "Biweekly" }),
         tx("q1", "2026-01-01", { description: "Quarterly" }),
         tx("q2", "2026-04-01", { description: "Quarterly" }),
+        tx("q3", "2026-07-01", { description: "Quarterly" }),
       ],
       "2026-06",
     );
@@ -389,5 +392,130 @@ describe("importTransactionsCsv", () => {
     expect(() =>
       importTransactionsCsv("date,description,amount\n2026-01-01"),
     ).toThrow("Row 2");
+  });
+});
+
+describe("findRecurringPayments merchant matching", () => {
+  const monthly = (id: string, month: number, description: string, amount: number, category = "Entertainment") =>
+    tx(`${id}${month}`, `2026-${String(month).padStart(2, "0")}-10`, {
+      description,
+      amount,
+      category,
+    });
+
+  it("treats bank descriptor noise as the same merchant", () => {
+    const result = findRecurringPayments(
+      [
+        monthly("a", 1, "NETFLIX.COM 866-579-7172 CA", 15.49),
+        monthly("b", 2, "Netflix", 15.49),
+        monthly("c", 3, "NETFLIX.COM 800-555-0100 CA", 15.49),
+      ],
+      "2026-06",
+    );
+
+    expect(result).toHaveLength(1);
+    expect(result[0].occurrences).toBe(3);
+  });
+
+  it("keeps different products from one merchant apart", () => {
+    const result = findRecurringPayments(
+      [
+        monthly("a", 1, "APPLE.COM/BILL ICLOUD", 2.99),
+        monthly("b", 2, "APPLE.COM/BILL ICLOUD", 2.99),
+        tx("x", "2026-01-20", { description: "APPLE.COM/BILL APP STORE", amount: 4.99, category: "Entertainment" }),
+      ],
+      "2026-06",
+    );
+
+    expect(result.map((payment) => payment.description)).toEqual(["APPLE.COM/BILL ICLOUD"]);
+  });
+
+  it("follows price increases and reports the latest price", () => {
+    const result = findRecurringPayments(
+      [
+        monthly("a", 1, "Streaming", 15.49),
+        monthly("b", 2, "Streaming", 15.49),
+        monthly("c", 3, "Streaming", 17.99),
+        monthly("d", 4, "Streaming", 17.99),
+      ],
+      "2026-06",
+    );
+
+    expect(result).toHaveLength(1);
+    expect(result[0].amount).toBe(17.99);
+  });
+
+  it("finds the regular charge when an extra fee shares its name", () => {
+    const charges = [1, 2, 3, 4, 5, 6].map((month) => monthly("g", month, "Gym", 24.99));
+    charges.push(tx("fee", "2026-01-13", { description: "Gym", amount: 49, category: "Entertainment" }));
+
+    const result = findRecurringPayments(charges, "2026-06");
+
+    expect(result).toHaveLength(1);
+    expect(result[0]).toMatchObject({ amount: 24.99, occurrences: 6 });
+  });
+
+  it("tolerates one missed payment when there is enough history", () => {
+    const charges = [1, 2, 3, 4, 5, 6, 8, 9, 10, 11].map((month) =>
+      monthly("m", month, "Cloud storage", 9.99),
+    );
+
+    expect(findRecurringPayments(charges, "2026-06")).toHaveLength(1);
+  });
+
+  it("requires three charges for a quarterly cadence", () => {
+    const result = findRecurringPayments(
+      [
+        tx("1", "2026-01-01", { description: "Maybe" }),
+        tx("2", "2026-04-01", { description: "Maybe" }),
+      ],
+      "2026-06",
+    );
+
+    expect(result).toEqual([]);
+  });
+
+  it("ignores a coincidental cluster inside frequent shopping", () => {
+    const frequent = Array.from({ length: 20 }, (_, index) =>
+      tx(`f${index}`, `2026-01-${String(index + 1).padStart(2, "0")}`, {
+        description: "Corner store",
+        amount: 5 + index * 7,
+      }),
+    );
+
+    expect(findRecurringPayments(frequent, "2026-06")).toEqual([]);
+  });
+});
+
+describe("normalizeMerchant", () => {
+  it("strips phone numbers, store numbers, states, and punctuation", () => {
+    expect(normalizeMerchant("HULU 877-8244858 CA")).toBe("HULU");
+    expect(normalizeMerchant("ATT*BILL PAYMENT")).toBe("ATT BILL");
+    expect(normalizeMerchant("AT&T BILL")).toBe("ATT BILL");
+    expect(normalizeMerchant("GITHUB, INC. SAN FRANCISCO CA")).toBe("GITHUB SAN FRANCISCO");
+  });
+
+  it("falls back to the trimmed description when nothing is left", () => {
+    expect(normalizeMerchant("  123 45 ")).toBe("123 45");
+  });
+});
+
+describe("getMonthlyCost", () => {
+  const payment = (frequency: "Weekly" | "Biweekly" | "Monthly" | "Quarterly") => ({
+    description: "x",
+    category: "Other",
+    amount: 12,
+    frequency,
+    lastDate: "2026-01-01",
+    occurrences: 3,
+  });
+
+  it.each([
+    ["Weekly", 52],
+    ["Biweekly", 26],
+    ["Monthly", 12],
+    ["Quarterly", 4],
+  ] as const)("normalizes %s charges to a monthly amount", (frequency, perYear) => {
+    expect(getMonthlyCost(payment(frequency))).toBeCloseTo((12 * perYear) / 12);
   });
 });

@@ -23,7 +23,7 @@ const tx = (
   overrides: Partial<Transaction> = {},
 ): Transaction => ({
   id,
-  description: "Groceries",
+  description: "Shopping",
   amount: 100,
   type: "expense",
   category: "Food & dining",
@@ -34,7 +34,7 @@ const tx = (
 describe("meta", () => {
   it("sets the document title and description", () => {
     expect(meta({} as never)).toEqual([
-      { title: "Spending Snapshot" },
+      { title: "Rocket Power" },
       expect.objectContaining({ name: "description" }),
     ]);
   });
@@ -130,8 +130,113 @@ describe("Home dashboard", () => {
     ]);
     render(<Home />);
 
-    expect(await screen.findByText("Possible subscriptions")).toBeInTheDocument();
-    expect(screen.getByText(/Monthly · next around/)).toHaveTextContent("3 payments this year");
+    // Phones and tablets: collapsed until opened. Desktop CSS keeps the list shown.
+    const toggle = await screen.findByRole("button", { name: /Subscriptions/ });
+    const list = document.getElementById("subscriptions-list")!;
+    expect(toggle).toHaveAttribute("aria-expanded", "false");
+    expect(list).toHaveClass("hidden", "lg:flex");
+
+    await userEvent.click(toggle);
+    expect(toggle).toHaveAttribute("aria-expanded", "true");
+    expect(list).not.toHaveClass("hidden");
+
+    await userEvent.click(toggle);
+    expect(toggle).toHaveAttribute("aria-expanded", "false");
+    expect(list).toHaveClass("hidden");
+    expect(screen.getByRole("heading", { name: /Subscriptions/ })).toBeInTheDocument();
+    expect(screen.getByText("1 subscription", { exact: false })).toHaveTextContent("about $180.00 a year");
+  });
+
+  describe("subscription card height fitting", () => {
+    const year = month.slice(0, 4);
+    const merchants = ["Alpha", "Bravo", "Charlie", "Delta", "Echo"];
+
+    beforeEach(() => {
+      seed(
+        merchants.flatMap((name, index) =>
+          [1, 2, 3].map((m) =>
+            tx(`${name}${m}`, {
+              description: name,
+              amount: 50 - index * 10,
+              date: `${year}-0${m}-05`,
+            }),
+          ),
+        ),
+      );
+      vi.spyOn(Element.prototype, "getBoundingClientRect").mockReturnValue({
+        height: 68,
+      } as DOMRect);
+      Object.defineProperty(HTMLElement.prototype, "clientHeight", {
+        configurable: true,
+        get() {
+          return this.id === "subscriptions-list" ? 150 : 0;
+        },
+      });
+    });
+    afterEach(() => {
+      delete (HTMLElement.prototype as { clientHeight?: number }).clientHeight;
+    });
+
+    const rows = () =>
+      within(document.getElementById("subscriptions-list")!).getAllByRole("listitem");
+    const hiddenRows = () => rows().filter((row) => row.className.includes("lg:hidden"));
+
+    it("shows only the rows that fit on load, with a +N more row", async () => {
+      render(<Home />);
+      await screen.findByRole("button", { name: /Subscriptions/ });
+
+      expect(hiddenRows()).toHaveLength(3);
+      expect(screen.getByRole("button", { name: "+3 more" })).toBeInTheDocument();
+    });
+
+    it("expands to every subscription and can collapse again", async () => {
+      render(<Home />);
+      await screen.findByRole("button", { name: /Subscriptions/ });
+
+      await userEvent.click(screen.getByRole("button", { name: "+3 more" }));
+      expect(hiddenRows()).toHaveLength(0);
+
+      await userEvent.click(screen.getByRole("button", { name: "Show fewer" }));
+      expect(hiddenRows()).toHaveLength(3);
+    });
+
+    it("returns to the fitted view with Show fewer", async () => {
+      render(<Home />);
+      await screen.findByRole("button", { name: /Subscriptions/ });
+      await userEvent.click(screen.getByRole("button", { name: "+3 more" }));
+      expect(hiddenRows()).toHaveLength(0);
+      await userEvent.click(screen.getByRole("button", { name: "Show fewer" }));
+
+      expect(hiddenRows()).toHaveLength(3);
+    });
+
+    it("always keeps at least one row when there is very little room", async () => {
+      Object.defineProperty(HTMLElement.prototype, "clientHeight", {
+        configurable: true,
+        get() {
+          return this.id === "subscriptions-list" ? 10 : 0;
+        },
+      });
+      render(<Home />);
+      await screen.findByRole("button", { name: /Subscriptions/ });
+
+      expect(hiddenRows()).toHaveLength(4);
+      expect(screen.getByRole("button", { name: "+4 more" })).toBeInTheDocument();
+    });
+
+    it("shows no more-row when everything fits", async () => {
+      Object.defineProperty(HTMLElement.prototype, "clientHeight", {
+        configurable: true,
+        get() {
+          return this.id === "subscriptions-list" ? 1000 : 0;
+        },
+      });
+      render(<Home />);
+      await screen.findByRole("button", { name: /Subscriptions/ });
+
+      expect(hiddenRows()).toHaveLength(0);
+      expect(screen.queryByRole("button", { name: /more/ })).not.toBeInTheDocument();
+    });
   });
 
   describe("storage", () => {
@@ -180,161 +285,83 @@ describe("Home dashboard", () => {
     });
   });
 
-  describe("adding transactions", () => {
-    const openDialog = async () => {
+  describe("editing a category", () => {
+    const openDialog = async (
+      overrides: Parameters<typeof tx>[1] = {},
+    ) => {
+      seed([tx("1", { description: "Lunch", amount: 12.5, ...overrides })]);
       const user = userEvent.setup();
       render(<Home />);
-      await screen.findByText("No transactions for this month");
-      await user.click(screen.getByRole("button", { name: /Add transaction/ }));
+      await user.click(await screen.findByRole("button", { name: "Edit Lunch" }));
       return { user, dialog: within(await screen.findByRole("dialog")) };
     };
 
-    it("adds an expense and persists it", async () => {
-      const { user, dialog } = await openDialog();
+    it("has no way to add or delete a transaction", async () => {
+      seed([tx("1", { description: "Lunch" })]);
+      render(<Home />);
+      await screen.findByText("Lunch");
 
-      await user.type(dialog.getByLabelText("Description"), "  Lunch  ");
-      await user.type(dialog.getByLabelText("Amount"), "12.5");
-      await user.click(dialog.getByRole("button", { name: "Add transaction" }));
-
-      expect(await screen.findByText("Lunch")).toBeInTheDocument();
-      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
-      expect(saved()).toEqual([
-        {
-          id: "00000000-0000-4000-8000-000000000001",
-          description: "Lunch",
-          amount: 12.5,
-          type: "expense",
-          category: "Food & dining",
-          date: getLocalDateString(),
-        },
-      ]);
+      expect(screen.queryByRole("button", { name: /Add transaction/ })).not.toBeInTheDocument();
+      expect(screen.queryByRole("button", { name: /Delete/ })).not.toBeInTheDocument();
     });
 
-    it("adds income and resets the category list when the type changes", async () => {
-      const { user, dialog } = await openDialog();
+    it("only offers the category field", async () => {
+      const { dialog } = await openDialog();
 
-      await user.selectOptions(dialog.getByLabelText("Type"), "income");
-      expect(dialog.getByLabelText("Category")).toHaveValue("Salary");
-      await user.selectOptions(dialog.getByLabelText("Type"), "expense");
       expect(dialog.getByLabelText("Category")).toHaveValue("Food & dining");
-      await user.selectOptions(dialog.getByLabelText("Type"), "income");
-
-      await user.type(dialog.getByLabelText("Description"), "Paycheck");
-      await user.type(dialog.getByLabelText("Amount"), "1000");
-      await user.selectOptions(dialog.getByLabelText("Category"), "Freelance");
-      fireEvent.change(dialog.getByLabelText("Date"), { target: { value: day(1) } });
-      await user.click(dialog.getByRole("button", { name: "Add transaction" }));
-
-      expect(await screen.findByText("Paycheck")).toBeInTheDocument();
-      expect(saved()[0]).toMatchObject({ type: "income", category: "Freelance", date: day(1) });
+      expect(dialog.queryByLabelText("Description")).not.toBeInTheDocument();
+      expect(dialog.queryByLabelText("Amount")).not.toBeInTheDocument();
+      expect(dialog.queryByLabelText("Type")).not.toBeInTheDocument();
+      expect(dialog.queryByLabelText("Date")).not.toBeInTheDocument();
     });
 
-    it.each([
-      ["a missing description", "", "5", "Add a name for this transaction."],
-      ["a zero amount", "Item", "0", "Enter an amount greater than zero"],
-      ["a blank amount", "Item", "", "Enter an amount greater than zero"],
-      ["too many decimals", "Item", "1.234", "up to two decimals"],
-    ])("validates %s", async (_name, description, amount, message) => {
+    it("saves only the category", async () => {
       const { user, dialog } = await openDialog();
 
-      if (description) await user.type(dialog.getByLabelText("Description"), description);
-      if (amount) await user.type(dialog.getByLabelText("Amount"), amount);
-      // Submit directly so native min/step constraints don't pre-empt app validation.
-      fireEvent.submit(screen.getByRole("dialog").querySelector("form")!);
+      await user.selectOptions(dialog.getByLabelText("Category"), "Shopping");
+      await user.click(dialog.getByRole("button", { name: "Save changes" }));
 
-      expect(dialog.getByRole("alert")).toHaveTextContent(message);
-      expect(saved()).toEqual([]);
+      expect(saved()).toHaveLength(1);
+      expect(saved()[0]).toMatchObject({
+        id: "1",
+        description: "Lunch",
+        amount: 12.5,
+        category: "Shopping",
+      });
     });
 
-    it("validates the date", async () => {
-      const { user, dialog } = await openDialog();
+    it("offers income categories for income and keeps an imported category", async () => {
+      const { dialog } = await openDialog({ type: "income", category: "Paycheck" });
 
-      await user.type(dialog.getByLabelText("Description"), "Item");
-      await user.type(dialog.getByLabelText("Amount"), "5");
-      fireEvent.change(dialog.getByLabelText("Date"), { target: { value: "" } });
-      await user.click(dialog.getByRole("button", { name: "Add transaction" }));
-
-      expect(dialog.getByRole("alert")).toHaveTextContent("Choose a valid transaction date.");
+      const options = dialog.getAllByRole("option").map((option) => option.textContent);
+      expect(options).toContain("Salary");
+      expect(options).toContain("Paycheck");
+      expect(options).not.toContain("Shopping");
+      expect(dialog.getByLabelText("Category")).toHaveValue("Paycheck");
     });
 
     it("closes without saving on cancel", async () => {
       const { user, dialog } = await openDialog();
 
-      await user.type(dialog.getByLabelText("Description"), "Discarded");
+      await user.selectOptions(dialog.getByLabelText("Category"), "Shopping");
       await user.click(dialog.getByRole("button", { name: "Cancel" }));
 
       expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
-      expect(screen.queryByText("Discarded")).not.toBeInTheDocument();
+      expect(saved()[0].category).toBe("Food & dining");
     });
 
-    it("clears the previous draft and error when reopened", async () => {
-      const { user, dialog } = await openDialog();
-
-      await user.click(dialog.getByRole("button", { name: "Add transaction" }));
-      expect(dialog.getByRole("alert")).toBeInTheDocument();
-      await user.click(dialog.getByRole("button", { name: "Cancel" }));
-      await user.click(screen.getByRole("button", { name: /Add transaction/ }));
-
-      const reopened = within(await screen.findByRole("dialog"));
-      expect(reopened.queryByRole("alert")).not.toBeInTheDocument();
-      expect(reopened.getByLabelText("Description")).toHaveValue("");
-    });
-  });
-
-  describe("editing and deleting", () => {
-    it("edits a transaction", async () => {
-      seed([tx("1", { description: "Old name", amount: 20 })]);
-      const user = userEvent.setup();
-      render(<Home />);
-
-      await user.click(await screen.findByRole("button", { name: "Edit Old name" }));
-      const dialog = within(await screen.findByRole("dialog"));
-      expect(dialog.getByLabelText("Description")).toHaveValue("Old name");
-      expect(dialog.getByLabelText("Amount")).toHaveValue(20);
-
-      await user.clear(dialog.getByLabelText("Description"));
-      await user.type(dialog.getByLabelText("Description"), "New name");
-      await user.click(dialog.getByRole("button", { name: "Save changes" }));
-
-      expect(await screen.findByText("New name")).toBeInTheDocument();
-      expect(saved()).toHaveLength(1);
-      expect(saved()[0]).toMatchObject({ id: "1", description: "New name", amount: 20 });
-    });
-
-    it("leaves other transactions untouched when editing one", async () => {
+    it("leaves other transactions untouched", async () => {
       seed([tx("1", { description: "First" }), tx("2", { description: "Second" })]);
       const user = userEvent.setup();
       render(<Home />);
 
       await user.click(await screen.findByRole("button", { name: "Edit First" }));
-      await user.click(within(await screen.findByRole("dialog")).getByRole("button", { name: "Save changes" }));
+      const dialog = within(await screen.findByRole("dialog"));
+      await user.selectOptions(dialog.getByLabelText("Category"), "Shopping");
+      await user.click(dialog.getByRole("button", { name: "Save changes" }));
 
-      expect(saved().map((item) => item.description).sort()).toEqual(["First", "Second"]);
-    });
-
-    it("deletes after confirmation", async () => {
-      seed([tx("1", { description: "Remove me" })]);
-      vi.spyOn(window, "confirm").mockReturnValue(true);
-      const user = userEvent.setup();
-      render(<Home />);
-
-      await user.click(await screen.findByRole("button", { name: "Delete Remove me" }));
-
-      expect(window.confirm).toHaveBeenCalledWith('Delete "Remove me"?');
-      expect(screen.queryByText("Remove me")).not.toBeInTheDocument();
-      expect(saved()).toEqual([]);
-    });
-
-    it("keeps the transaction when deletion is cancelled", async () => {
-      seed([tx("1", { description: "Keep me" })]);
-      vi.spyOn(window, "confirm").mockReturnValue(false);
-      const user = userEvent.setup();
-      render(<Home />);
-
-      await user.click(await screen.findByRole("button", { name: "Delete Keep me" }));
-
-      expect(screen.getByText("Keep me")).toBeInTheDocument();
-      expect(saved()).toHaveLength(1);
+      const byName = Object.fromEntries(saved().map((item) => [item.description, item.category]));
+      expect(byName).toEqual({ First: "Shopping", Second: "Food & dining" });
     });
   });
 

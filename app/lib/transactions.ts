@@ -39,7 +39,7 @@ export type RecurringPayment = {
   category: string;
   amount: number;
   frequency: "Weekly" | "Biweekly" | "Monthly" | "Quarterly";
-  nextDate: string;
+  lastDate: string;
   occurrences: number;
 };
 
@@ -49,20 +49,110 @@ function daysBetween(firstDate: string, secondDate: string) {
   return Math.round((second.getTime() - first.getTime()) / 86_400_000);
 }
 
-function recurringFrequency(averageDays: number) {
-  if (averageDays >= 6 && averageDays <= 8) {
+function recurringFrequency(medianDays: number) {
+  if (medianDays >= 6 && medianDays <= 8) {
     return { label: "Weekly" as const, days: 7 };
   }
-  if (averageDays >= 12 && averageDays <= 16) {
+  if (medianDays >= 12 && medianDays <= 16) {
     return { label: "Biweekly" as const, days: 14 };
   }
-  if (averageDays >= 26 && averageDays <= 35) {
+  if (medianDays >= 26 && medianDays <= 35) {
     return { label: "Monthly" as const, days: 30 };
   }
-  if (averageDays >= 80 && averageDays <= 100) {
+  if (medianDays >= 80 && medianDays <= 100) {
     return { label: "Quarterly" as const, days: 90 };
   }
   return null;
+}
+
+// Words banks add to descriptors that say nothing about who was paid.
+const DESCRIPTION_NOISE = new Set([
+  "COM", "WWW", "INC", "LLC", "LTD", "CO", "CORP", "PAYMENT", "PMT", "PURCHASE",
+  "POS", "DEBIT", "CARD", "ONLINE", "RECURRING", "AUTOPAY", "AUTO", "PAY",
+  "SQ", "TST", "PP", "PAYPAL",
+  "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
+  "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
+  "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
+  "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY", "DC",
+]);
+
+// "NETFLIX.COM 866-579-7172 CA" and "Netflix" should be the same merchant.
+export function normalizeMerchant(description: string) {
+  const tokens = description
+    .toUpperCase()
+    .replace(/&/g, "")
+    .split(/[^A-Z]+/)
+    .filter((token) => token.length > 1 && !DESCRIPTION_NOISE.has(token));
+  return tokens.length > 0 ? tokens.join(" ") : description.trim().toLowerCase();
+}
+
+function median(values: number[]) {
+  const sorted = [...values].sort((first, second) => first - second);
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 === 0
+    ? (sorted[middle - 1] + sorted[middle]) / 2
+    : sorted[middle];
+}
+
+// Splits charges into price tiers so a one-off fee billed under the same
+// name (for example an annual fee) does not hide the regular charge.
+function clusterByAmount(payments: Transaction[]) {
+  const sorted = [...payments].sort((first, second) => first.amount - second.amount);
+  const clusters: Transaction[][] = [];
+  for (const payment of sorted) {
+    const current = clusters.at(-1);
+    if (current && payment.amount <= current.at(-1)!.amount * 1.12 + 0.5) {
+      current.push(payment);
+    } else {
+      clusters.push([payment]);
+    }
+  }
+  return clusters;
+}
+
+function detectCadence(payments: Transaction[]) {
+  if (payments.length < 2) return null;
+
+  const sorted = [...payments].sort((first, second) =>
+    first.date.localeCompare(second.date),
+  );
+  const typicalAmount = median(sorted.map((payment) => payment.amount));
+  // Price changes and tax swings are normal; wild swings are not a subscription.
+  const tolerance = Math.max(1, typicalAmount * 0.25);
+  if (sorted.some((payment) => Math.abs(payment.amount - typicalAmount) > tolerance)) {
+    return null;
+  }
+
+  const intervals = sorted
+    .slice(1)
+    .map((payment, index) => daysBetween(sorted[index].date, payment.date));
+  if (intervals.some((interval) => interval <= 0)) return null;
+
+  const frequency = recurringFrequency(median(intervals));
+  if (!frequency) return null;
+  // Two charges are too easy to line up by chance at a long cadence.
+  if (frequency.label === "Quarterly" && sorted.length < 3) return null;
+
+  const regular = intervals.filter(
+    (interval) =>
+      interval >= frequency.days * 0.8 && interval <= frequency.days * 1.2,
+  ).length;
+  // With enough history, tolerate an occasional skipped or late payment.
+  const required = intervals.length >= 5 ? Math.ceil(intervals.length * 0.8) : intervals.length;
+  if (regular < required) return null;
+
+  return { frequency, sorted };
+}
+
+const PAYMENTS_PER_MONTH: Record<RecurringPayment["frequency"], number> = {
+  Weekly: 52 / 12,
+  Biweekly: 26 / 12,
+  Monthly: 1,
+  Quarterly: 1 / 3,
+};
+
+export function getMonthlyCost(payment: RecurringPayment) {
+  return payment.amount * PAYMENTS_PER_MONTH[payment.frequency];
 }
 
 export function findRecurringPayments(
@@ -72,76 +162,48 @@ export function findRecurringPayments(
   const selectedYear = referenceMonth.slice(0, 4);
   if (!/^\d{4}$/.test(selectedYear)) return [];
 
-  const paymentsByDescription = transactions
+  const paymentsByMerchant = transactions
     .filter(
       (transaction) =>
         transaction.type === "expense" &&
         transaction.date.startsWith(`${selectedYear}-`),
     )
     .reduce<Map<string, Transaction[]>>((groups, transaction) => {
-      const key = `${transaction.description.trim().toLowerCase()}\u0000${transaction.category.trim().toLowerCase()}`;
+      const key = `${normalizeMerchant(transaction.description)}\u0000${transaction.category.trim().toLowerCase()}`;
       const group = groups.get(key) ?? [];
       group.push(transaction);
       groups.set(key, group);
       return groups;
     }, new Map());
 
-  return Array.from(paymentsByDescription.values())
+  return Array.from(paymentsByMerchant.values())
     .flatMap((payments) => {
-      if (payments.length < 2) return [];
+      const whole = detectCadence(payments);
+      const matches = whole
+        ? [whole]
+        : clusterByAmount(payments).flatMap((cluster) => {
+            if (cluster.length < 3 || cluster.length < payments.length / 2) {
+              return [];
+            }
+            const result = detectCadence(cluster);
+            return result ? [result] : [];
+          });
 
-      const sortedPayments = [...payments].sort((first, second) =>
-        first.date.localeCompare(second.date),
-      );
-      const referenceAmount = sortedPayments[0].amount;
-      const amountTolerance = Math.max(1, referenceAmount * 0.05);
-      if (
-        sortedPayments.some(
-          (payment) =>
-            Math.abs(payment.amount - referenceAmount) > amountTolerance,
-        )
-      ) {
-        return [];
-      }
-
-      const intervals = sortedPayments
-        .slice(1)
-        .map((payment, index) =>
-          daysBetween(sortedPayments[index].date, payment.date),
-        );
-      if (intervals.some((interval) => interval <= 0)) return [];
-      const averageDays =
-        intervals.reduce((total, interval) => total + interval, 0) /
-        intervals.length;
-      const frequency = recurringFrequency(averageDays);
-      if (!frequency) return [];
-      if (
-        intervals.some(
-          (interval) =>
-            interval < frequency.days * 0.8 ||
-            interval > frequency.days * 1.2,
-        )
-      ) {
-        return [];
-      }
-
-      const lastPayment = sortedPayments.at(-1);
-      if (!lastPayment) return [];
-      const nextDate = new Date(`${lastPayment.date}T12:00:00`);
-      nextDate.setDate(nextDate.getDate() + frequency.days);
-
-      return [
-        {
+      return matches.map(({ frequency, sorted }) => {
+        const lastPayment = sorted[sorted.length - 1];
+        return {
           description: lastPayment.description,
           category: lastPayment.category,
-          amount: referenceAmount,
+          amount: lastPayment.amount,
           frequency: frequency.label,
-          nextDate: getLocalDateString(nextDate),
-          occurrences: sortedPayments.length,
-        },
-      ];
+          lastDate: lastPayment.date,
+          occurrences: sorted.length,
+        };
+      });
     })
-    .sort((first, second) => second.amount - first.amount);
+    .sort(
+      (first, second) => getMonthlyCost(second) - getMonthlyCost(first),
+    );
 }
 
 function parseCsvRows(csv: string): string[][] {

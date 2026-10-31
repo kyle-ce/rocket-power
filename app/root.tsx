@@ -19,6 +19,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <Meta />
         <Links />
       </head>
@@ -49,7 +50,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
         <div className="mx-auto mb-5 flex size-12 items-center justify-center rounded-xl bg-emerald-600 text-white">
           <span className="font-heading text-lg font-semibold">S</span>
         </div>
-        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-400">Spending Snapshot</p>
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-400">Rocket Power</p>
         <h1 className="mt-2 font-heading text-2xl font-semibold tracking-tight">
           {isNotFound ? "Page not found" : "Something went wrong"}
         </h1>

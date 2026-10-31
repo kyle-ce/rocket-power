@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Netflix",
+    "pattern": "NETFLIX",
+    "frequency": "Monthly",
+    "kind": "subscription",
+    "notes": "Price hike in 2025-03 ($15.49 -> $17.99)."
+  },
+  {
+    "name": "Hulu",
+    "pattern": "HULU",
+    "frequency": "Monthly",
+    "kind": "subscription",
+    "notes": "Bank adds phone/state noise."
+  },
+  {
+    "name": "GitHub",
+    "pattern": "GITHUB",
+    "frequency": "Monthly",
+    "kind": "subscription",
+    "notes": "Description contains a comma; weekend shifts."
+  },
+  {
+    "name": "Discord Nitro",
+    "pattern": "DISCORD",
+    "frequency": "Monthly",
+    "kind": "subscription",
+    "notes": "Date drifts +-2 days."
+  },
+  {
+    "name": "AT&T",
+    "pattern": "AT&T|ATT\\*",
+    "frequency": "Monthly",
+    "kind": "bill",
+    "notes": "Amount varies ~$84-$93 from taxes/fees."
+  },
+  {
+    "name": "Navy Federal car insurance",
+    "pattern": "NAVY FEDERAL",
+    "frequency": "Monthly",
+    "kind": "bill",
+    "notes": "Premium rises at the 6-month renewal."
+  },
+  {
+    "name": "Spotify",
+    "pattern": "SPOTIFY",
+    "frequency": "Monthly",
+    "kind": "subscription",
+    "notes": "Price hike in 2025-01."
+  },
+  {
+    "name": "iCloud",
+    "pattern": "APPLE\\.COM/BILL ICLOUD",
+    "frequency": "Monthly",
+    "kind": "subscription",
+    "notes": "Shares a merchant with one-off Apple purchases (decoys)."
+  },
+  {
+    "name": "Planet Fitness",
+    "pattern": "PLANET FIT",
+    "frequency": "Monthly",
+    "kind": "subscription",
+    "notes": "Extra $49 annual fee each January with the same description."
+  },
+  {
+    "name": "Amazon Prime (annual)",
+    "pattern": "PRIME",
+    "frequency": "Yearly",
+    "kind": "subscription",
+    "detectableWithinYear": false,
+    "notes": "One charge per year ($139 -> $149). Needs cross-year history."
+  },
+  {
+    "name": "Duke Energy (variable utility)",
+    "pattern": "DUKE ENERGY",
+    "frequency": "Monthly",
+    "kind": "ambiguous",
+    "notes": "Monthly bill with a large amount swing. Reporting it is acceptable but not required."
+  }
+]

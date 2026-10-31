@@ -1,0 +1,1095 @@
+Date,Description,Amount,Category,Type
+2024-01-01,DUNKIN #348291,6.19,Food & dining,expense
+2024-01-01,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2024-01-01,STARBUCKS STORE 1182,6.71,Food & dining,expense
+2024-01-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-01-03,MCDONALD'S F1873,22.05,Food & dining,expense
+2024-01-04,DUNKIN #348291,6.19,Food & dining,expense
+2024-01-04,SHELL OIL 574412,58.91,Transport,expense
+2024-01-05,ACME CORP PAYROLL,2350.00,Salary,income
+2024-01-05,DUNKIN #348291,5.49,Food & dining,expense
+2024-01-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-01-05,UBER *TRIP,32.87,Transport,expense
+2024-01-08,DISCORD* NITRO,9.99,Entertainment,expense
+2024-01-08,DUNKIN #348291,6.19,Food & dining,expense
+2024-01-08,PLANET FITNESS CLUB FEE,49.00,Health,expense
+2024-01-08,SHELL OIL 574412,58.34,Transport,expense
+2024-01-08,WAL-MART SUPERCENTER,24.74,Food & dining,expense
+2024-01-09,DUNKIN #348291,4.89,Food & dining,expense
+2024-01-09,MISTER CAR WASH #112,18.00,Transport,expense
+2024-01-10,DUNKIN #348291,5.49,Food & dining,expense
+2024-01-10,STARBUCKS STORE 1182,7.22,Food & dining,expense
+2024-01-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-01-11,DUNKIN #348291,6.19,Food & dining,expense
+2024-01-13,DUNKIN #348291,5.49,Food & dining,expense
+2024-01-13,UBER *TRIP,21.81,Transport,expense
+2024-01-14,DUNKIN #348291,5.49,Food & dining,expense
+2024-01-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-01-15,CHIPOTLE 2210,24.46,Food & dining,expense
+2024-01-15,CVS/PHARMACY #08821,38.69,Health,expense
+2024-01-15,UBER *TRIP,23.22,Transport,expense
+2024-01-16,DUKE ENERGY BILL PAY,172.40,Bills & utilities,expense
+2024-01-16,DUNKIN #348291,4.89,Food & dining,expense
+2024-01-17,DOORDASH*ORDER,10.30,Food & dining,expense
+2024-01-17,DUNKIN #348291,6.19,Food & dining,expense
+2024-01-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-01-18,DUNKIN #348291,6.19,Food & dining,expense
+2024-01-19,ACME CORP PAYROLL,2350.00,Salary,income
+2024-01-20,TARGET 00019283,97.20,Shopping,expense
+2024-01-22,DUNKIN #348291,5.49,Food & dining,expense
+2024-01-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-01-23,SHELL OIL 574412,55.18,Transport,expense
+2024-01-23,STARBUCKS STORE 1182,6.33,Food & dining,expense
+2024-01-24,DUNKIN #348291,6.19,Food & dining,expense
+2024-01-24,KROGER #512,24.18,Food & dining,expense
+2024-01-25,ATT*BILL PAYMENT,89.49,Bills & utilities,expense
+2024-01-25,BEST BUY 00381,44.99,Shopping,expense
+2024-01-25,DUNKIN #348291,5.49,Food & dining,expense
+2024-01-26,DOORDASH*ORDER,27.22,Food & dining,expense
+2024-01-26,SHELL OIL 574412,48.26,Transport,expense
+2024-01-27,DUNKIN #348291,5.49,Food & dining,expense
+2024-01-27,KROGER #512,64.60,Food & dining,expense
+2024-01-27,SPEEDWAY 8827,50.10,Transport,expense
+2024-01-27,TARGET 00019283,24.23,Shopping,expense
+2024-01-29,DOORDASH*ORDER,46.67,Food & dining,expense
+2024-01-29,DUNKIN #348291,4.89,Food & dining,expense
+2024-01-29,SHELL OIL 574412,55.89,Transport,expense
+2024-01-30,AMAZON.COM*2K4LP,91.29,Shopping,expense
+2024-01-30,OLIVE GARDEN 0412,38.84,Food & dining,expense
+2024-01-30,STARBUCKS STORE 1182,9.57,Food & dining,expense
+2024-01-30,WAL-MART SUPERCENTER,102.60,Food & dining,expense
+2024-01-31,DUNKIN #348291,4.89,Food & dining,expense
+2024-02-01,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2024-02-02,ACME CORP PAYROLL,2350.00,Salary,income
+2024-02-02,DUNKIN #348291,5.49,Food & dining,expense
+2024-02-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-02-05,DUNKIN #348291,4.89,Food & dining,expense
+2024-02-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-02-06,AMAZON.COM*2K4LP,79.18,Shopping,expense
+2024-02-07,AMAZON.COM*2K4LP,83.39,Shopping,expense
+2024-02-07,DISCORD* NITRO,9.99,Entertainment,expense
+2024-02-07,DUNKIN #348291,6.19,Food & dining,expense
+2024-02-09,ALDI 77031,91.65,Food & dining,expense
+2024-02-09,APPLE.COM/BILL APP STORE,14.99,Other,expense
+2024-02-09,DUNKIN #348291,4.89,Food & dining,expense
+2024-02-09,SPEEDWAY 8827,55.96,Transport,expense
+2024-02-10,AMAZON.COM*2K4LP,39.15,Shopping,expense
+2024-02-10,WAL-MART SUPERCENTER,78.08,Food & dining,expense
+2024-02-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-02-11,MISTER CAR WASH #112,18.00,Transport,expense
+2024-02-13,DUNKIN #348291,5.49,Food & dining,expense
+2024-02-14,DUNKIN #348291,6.19,Food & dining,expense
+2024-02-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-02-14,SPEEDWAY 8827,38.98,Transport,expense
+2024-02-15,DUNKIN #348291,6.19,Food & dining,expense
+2024-02-15,MCDONALD'S F1873,44.58,Food & dining,expense
+2024-02-15,UBER *TRIP,27.90,Transport,expense
+2024-02-16,ACME CORP PAYROLL,2350.00,Salary,income
+2024-02-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-02-18,DUKE ENERGY BILL PAY,86.58,Bills & utilities,expense
+2024-02-18,WAL-MART SUPERCENTER,79.90,Food & dining,expense
+2024-02-19,DUNKIN #348291,4.89,Food & dining,expense
+2024-02-20,DUNKIN #348291,5.49,Food & dining,expense
+2024-02-21,AMAZON.COM*2K4LP,50.19,Shopping,expense
+2024-02-21,DUNKIN #348291,5.49,Food & dining,expense
+2024-02-21,SPEEDWAY 8827,39.09,Transport,expense
+2024-02-21,STARBUCKS STORE 1182,8.30,Food & dining,expense
+2024-02-22,EXXONMOBIL 4410,59.25,Transport,expense
+2024-02-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-02-24,PUBLIX #1204,26.54,Food & dining,expense
+2024-02-24,TACO BELL 031,17.25,Food & dining,expense
+2024-02-25,ATT*BILL PAYMENT,90.90,Bills & utilities,expense
+2024-02-25,DUNKIN #348291,5.49,Food & dining,expense
+2024-02-26,SPEEDWAY 8827,43.27,Transport,expense
+2024-02-29,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-01,ACME CORP PAYROLL,2350.00,Salary,income
+2024-03-01,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2024-03-02,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-03,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-03-03,KROGER #512,113.19,Food & dining,expense
+2024-03-04,DUNKIN #348291,4.89,Food & dining,expense
+2024-03-05,APPLE.COM/BILL APP STORE,4.99,Other,expense
+2024-03-05,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-03-08,DISCORD* NITRO,9.99,Entertainment,expense
+2024-03-08,DOORDASH*ORDER,11.05,Food & dining,expense
+2024-03-08,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-03-12,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-13,UBER *TRIP,27.02,Transport,expense
+2024-03-14,DUNKIN #348291,4.89,Food & dining,expense
+2024-03-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-03-14,STARBUCKS STORE 1182,7.56,Food & dining,expense
+2024-03-15,ACME CORP PAYROLL,2350.00,Salary,income
+2024-03-15,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-15,STARBUCKS STORE 1182,7.26,Food & dining,expense
+2024-03-16,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-16,WAL-MART SUPERCENTER,76.09,Food & dining,expense
+2024-03-17,SPEEDWAY 8827,44.45,Transport,expense
+2024-03-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-03-18,DUKE ENERGY BILL PAY,164.24,Bills & utilities,expense
+2024-03-19,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-19,MISTER CAR WASH #112,18.00,Transport,expense
+2024-03-21,ALDI 77031,53.47,Food & dining,expense
+2024-03-21,DUNKIN #348291,4.89,Food & dining,expense
+2024-03-21,EXXONMOBIL 4410,32.65,Transport,expense
+2024-03-22,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-03-23,HOME DEPOT #4107,76.57,Shopping,expense
+2024-03-23,KROGER #512,41.42,Food & dining,expense
+2024-03-24,DUNKIN #348291,6.19,Food & dining,expense
+2024-03-25,ATT*BILL PAYMENT,84.65,Bills & utilities,expense
+2024-03-25,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-25,UBER *TRIP,21.29,Transport,expense
+2024-03-25,WAL-MART SUPERCENTER,65.29,Food & dining,expense
+2024-03-26,DUNKIN #348291,4.89,Food & dining,expense
+2024-03-26,SHELL OIL 574412,58.12,Transport,expense
+2024-03-26,STARBUCKS STORE 1182,5.59,Food & dining,expense
+2024-03-27,DUNKIN #348291,5.49,Food & dining,expense
+2024-03-29,ACME CORP PAYROLL,2350.00,Salary,income
+2024-03-30,AMAZON.COM*2K4LP,64.29,Shopping,expense
+2024-03-31,DUNKIN #348291,6.19,Food & dining,expense
+2024-03-31,SPEEDWAY 8827,41.70,Transport,expense
+2024-04-01,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2024-04-01,PUBLIX #1204,139.58,Food & dining,expense
+2024-04-02,BEST BUY 00381,28.92,Shopping,expense
+2024-04-02,OLIVE GARDEN 0412,14.11,Food & dining,expense
+2024-04-03,AMAZON.COM*2K4LP,20.63,Shopping,expense
+2024-04-03,CHIPOTLE 2210,34.28,Food & dining,expense
+2024-04-03,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-04-04,SPEEDWAY 8827,43.47,Transport,expense
+2024-04-04,WAL-MART SUPERCENTER,82.45,Food & dining,expense
+2024-04-05,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-04-06,BEST BUY 00381,137.36,Shopping,expense
+2024-04-06,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-06,MCDONALD'S F1873,10.63,Food & dining,expense
+2024-04-07,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-09,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-09,UBER *TRIP,9.58,Transport,expense
+2024-04-10,DISCORD* NITRO,9.99,Entertainment,expense
+2024-04-10,MISTER CAR WASH #112,18.00,Transport,expense
+2024-04-10,PANERA BREAD #2201,32.62,Food & dining,expense
+2024-04-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-04-11,DOORDASH*ORDER,34.92,Food & dining,expense
+2024-04-12,ACME CORP PAYROLL,2350.00,Salary,income
+2024-04-12,AMAZON PRIME*MEMBERSHIP,139.00,Shopping,expense
+2024-04-12,DUNKIN #348291,4.89,Food & dining,expense
+2024-04-13,DOORDASH*ORDER,48.00,Food & dining,expense
+2024-04-13,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-13,STARBUCKS STORE 1182,8.51,Food & dining,expense
+2024-04-14,DUNKIN #348291,6.19,Food & dining,expense
+2024-04-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-04-14,PUBLIX #1204,101.09,Food & dining,expense
+2024-04-15,DOORDASH*ORDER,9.25,Food & dining,expense
+2024-04-16,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-17,DUKE ENERGY BILL PAY,165.94,Bills & utilities,expense
+2024-04-17,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-17,MCDONALD'S F1873,47.88,Food & dining,expense
+2024-04-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-04-18,DUNKIN #348291,4.89,Food & dining,expense
+2024-04-18,STARBUCKS STORE 1182,5.48,Food & dining,expense
+2024-04-20,DUNKIN #348291,6.19,Food & dining,expense
+2024-04-22,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-04-23,DUNKIN #348291,6.19,Food & dining,expense
+2024-04-24,DUNKIN #348291,4.89,Food & dining,expense
+2024-04-25,ATT*BILL PAYMENT,88.24,Bills & utilities,expense
+2024-04-25,DUNKIN #348291,5.49,Food & dining,expense
+2024-04-26,ACME CORP PAYROLL,2350.00,Salary,income
+2024-04-26,STARBUCKS STORE 1182,7.76,Food & dining,expense
+2024-04-27,DUNKIN #348291,6.19,Food & dining,expense
+2024-04-28,DUNKIN #348291,4.89,Food & dining,expense
+2024-04-29,PUBLIX #1204,62.53,Food & dining,expense
+2024-04-29,STARBUCKS STORE 1182,9.66,Food & dining,expense
+2024-05-01,DUNKIN #348291,5.49,Food & dining,expense
+2024-05-01,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2024-05-01,PUBLIX #1204,61.38,Food & dining,expense
+2024-05-02,STARBUCKS STORE 1182,7.36,Food & dining,expense
+2024-05-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-05-04,STARBUCKS STORE 1182,5.90,Food & dining,expense
+2024-05-05,BEST BUY 00381,109.22,Shopping,expense
+2024-05-05,MISTER CAR WASH #112,18.00,Transport,expense
+2024-05-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-05-06,DUNKIN #348291,5.49,Food & dining,expense
+2024-05-06,HOME DEPOT #4107,52.05,Shopping,expense
+2024-05-07,DISCORD* NITRO,9.99,Entertainment,expense
+2024-05-07,STARBUCKS STORE 1182,8.08,Food & dining,expense
+2024-05-08,EXXONMOBIL 4410,57.37,Transport,expense
+2024-05-08,WAL-MART SUPERCENTER,126.26,Food & dining,expense
+2024-05-09,PUBLIX #1204,34.30,Food & dining,expense
+2024-05-10,ACME CORP PAYROLL,2350.00,Salary,income
+2024-05-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-05-11,CVS/PHARMACY #08821,38.06,Health,expense
+2024-05-12,CVS/PHARMACY #08821,28.08,Health,expense
+2024-05-12,WAL-MART SUPERCENTER,88.15,Food & dining,expense
+2024-05-13,KROGER #512,104.94,Food & dining,expense
+2024-05-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-05-15,ALDI 77031,25.55,Food & dining,expense
+2024-05-15,DUNKIN #348291,5.49,Food & dining,expense
+2024-05-15,EXXONMOBIL 4410,47.93,Transport,expense
+2024-05-17,DUKE ENERGY BILL PAY,84.17,Bills & utilities,expense
+2024-05-17,DUNKIN #348291,4.89,Food & dining,expense
+2024-05-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-05-17,STARBUCKS STORE 1182,9.08,Food & dining,expense
+2024-05-18,ALDI 77031,85.84,Food & dining,expense
+2024-05-19,UBER *TRIP,12.66,Transport,expense
+2024-05-21,DUNKIN #348291,6.19,Food & dining,expense
+2024-05-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-05-22,SHELL OIL 574412,41.52,Transport,expense
+2024-05-24,ACME CORP PAYROLL,2350.00,Salary,income
+2024-05-25,ATT*BILL PAYMENT,86.50,Bills & utilities,expense
+2024-05-26,MISTER CAR WASH #112,18.00,Transport,expense
+2024-05-26,STARBUCKS STORE 1182,7.59,Food & dining,expense
+2024-05-29,STARBUCKS STORE 1182,8.47,Food & dining,expense
+2024-05-30,DUNKIN #348291,5.49,Food & dining,expense
+2024-06-01,UBER *TRIP,30.71,Transport,expense
+2024-06-02,DUNKIN #348291,4.89,Food & dining,expense
+2024-06-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-06-03,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2024-06-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-06-05,WAL-MART SUPERCENTER,104.79,Food & dining,expense
+2024-06-06,HOME DEPOT #4107,107.24,Shopping,expense
+2024-06-07,ACME CORP PAYROLL,2350.00,Salary,income
+2024-06-07,SHELL OIL 574412,44.08,Transport,expense
+2024-06-08,DUNKIN #348291,6.19,Food & dining,expense
+2024-06-08,STARBUCKS STORE 1182,7.09,Food & dining,expense
+2024-06-09,AMAZON.COM*2K4LP,106.01,Shopping,expense
+2024-06-09,APPLE.COM/BILL APP STORE,1.99,Other,expense
+2024-06-09,DUNKIN #348291,6.19,Food & dining,expense
+2024-06-09,STARBUCKS STORE 1182,5.43,Food & dining,expense
+2024-06-10,DISCORD* NITRO,9.99,Entertainment,expense
+2024-06-10,DUNKIN #348291,6.19,Food & dining,expense
+2024-06-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-06-12,STARBUCKS STORE 1182,7.45,Food & dining,expense
+2024-06-13,ALDI 77031,71.79,Food & dining,expense
+2024-06-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-06-15,DUNKIN #348291,5.49,Food & dining,expense
+2024-06-15,UBER *TRIP,14.21,Transport,expense
+2024-06-16,DUNKIN #348291,4.89,Food & dining,expense
+2024-06-17,DUNKIN #348291,6.19,Food & dining,expense
+2024-06-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-06-18,AMAZON.COM*2K4LP,59.16,Shopping,expense
+2024-06-18,DUKE ENERGY BILL PAY,161.50,Bills & utilities,expense
+2024-06-18,DUNKIN #348291,5.49,Food & dining,expense
+2024-06-18,WAL-MART SUPERCENTER,154.45,Food & dining,expense
+2024-06-19,DUNKIN #348291,4.89,Food & dining,expense
+2024-06-20,CHIPOTLE 2210,18.34,Food & dining,expense
+2024-06-21,ACME CORP PAYROLL,2350.00,Salary,income
+2024-06-21,MCDONALD'S F1873,28.95,Food & dining,expense
+2024-06-21,MISTER CAR WASH #112,18.00,Transport,expense
+2024-06-21,SPEEDWAY 8827,59.78,Transport,expense
+2024-06-23,DUNKIN #348291,5.49,Food & dining,expense
+2024-06-23,STARBUCKS STORE 1182,6.36,Food & dining,expense
+2024-06-24,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-06-25,ATT*BILL PAYMENT,88.68,Bills & utilities,expense
+2024-06-25,WAL-MART SUPERCENTER,32.50,Food & dining,expense
+2024-06-26,CVS/PHARMACY #08821,17.07,Health,expense
+2024-06-26,DUNKIN #348291,5.49,Food & dining,expense
+2024-06-27,DUNKIN #348291,5.49,Food & dining,expense
+2024-06-30,MCDONALD'S F1873,20.11,Food & dining,expense
+2024-06-30,PUBLIX #1204,147.96,Food & dining,expense
+2024-07-01,DUNKIN #348291,5.49,Food & dining,expense
+2024-07-01,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2024-07-01,STARBUCKS STORE 1182,6.86,Food & dining,expense
+2024-07-02,DUNKIN #348291,6.19,Food & dining,expense
+2024-07-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-07-04,DUNKIN #348291,6.19,Food & dining,expense
+2024-07-05,ACME CORP PAYROLL,2350.00,Salary,income
+2024-07-05,BEST BUY 00381,21.62,Shopping,expense
+2024-07-05,DUNKIN #348291,5.49,Food & dining,expense
+2024-07-05,PANERA BREAD #2201,45.74,Food & dining,expense
+2024-07-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-07-06,MCDONALD'S F1873,25.74,Food & dining,expense
+2024-07-07,APPLE.COM/BILL APP STORE,4.99,Other,expense
+2024-07-07,DUNKIN #348291,5.49,Food & dining,expense
+2024-07-07,STARBUCKS STORE 1182,8.21,Food & dining,expense
+2024-07-08,DUNKIN #348291,5.49,Food & dining,expense
+2024-07-09,CHIPOTLE 2210,26.76,Food & dining,expense
+2024-07-09,DUNKIN #348291,5.49,Food & dining,expense
+2024-07-09,EXXONMOBIL 4410,41.36,Transport,expense
+2024-07-09,TARGET 00019283,91.71,Shopping,expense
+2024-07-10,DISCORD* NITRO,9.99,Entertainment,expense
+2024-07-10,DUNKIN #348291,4.89,Food & dining,expense
+2024-07-11,AMAZON.COM*2K4LP,42.49,Shopping,expense
+2024-07-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-07-11,STARBUCKS STORE 1182,8.52,Food & dining,expense
+2024-07-13,DUNKIN #348291,6.19,Food & dining,expense
+2024-07-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-07-14,PUBLIX #1204,142.18,Food & dining,expense
+2024-07-14,UBER *TRIP,13.84,Transport,expense
+2024-07-16,DUKE ENERGY BILL PAY,115.85,Bills & utilities,expense
+2024-07-17,DUNKIN #348291,6.19,Food & dining,expense
+2024-07-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-07-18,PANERA BREAD #2201,14.51,Food & dining,expense
+2024-07-18,SPEEDWAY 8827,40.11,Transport,expense
+2024-07-19,ACME CORP PAYROLL,2350.00,Salary,income
+2024-07-19,DUNKIN #348291,4.89,Food & dining,expense
+2024-07-19,SHELL OIL 574412,43.27,Transport,expense
+2024-07-19,TARGET 00019283,120.25,Shopping,expense
+2024-07-20,STARBUCKS STORE 1182,8.21,Food & dining,expense
+2024-07-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-07-22,SPEEDWAY 8827,34.81,Transport,expense
+2024-07-23,DUNKIN #348291,6.19,Food & dining,expense
+2024-07-23,EXXONMOBIL 4410,60.66,Transport,expense
+2024-07-24,STARBUCKS STORE 1182,7.74,Food & dining,expense
+2024-07-25,ATT*BILL PAYMENT,88.21,Bills & utilities,expense
+2024-07-28,DUNKIN #348291,6.19,Food & dining,expense
+2024-07-28,PANERA BREAD #2201,17.83,Food & dining,expense
+2024-07-28,PUBLIX #1204,113.15,Food & dining,expense
+2024-07-30,HOME DEPOT #4107,128.27,Shopping,expense
+2024-07-30,MISTER CAR WASH #112,18.00,Transport,expense
+2024-07-30,WAL-MART SUPERCENTER,38.66,Food & dining,expense
+2024-07-31,DUNKIN #348291,6.19,Food & dining,expense
+2024-07-31,UBER *TRIP,13.16,Transport,expense
+2024-08-01,DUNKIN #348291,4.89,Food & dining,expense
+2024-08-01,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2024-08-02,ACME CORP PAYROLL,2350.00,Salary,income
+2024-08-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-08-04,ALDI 77031,119.96,Food & dining,expense
+2024-08-04,DUNKIN #348291,4.89,Food & dining,expense
+2024-08-05,DUNKIN #348291,5.49,Food & dining,expense
+2024-08-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-08-06,DUNKIN #348291,5.49,Food & dining,expense
+2024-08-07,ALDI 77031,46.52,Food & dining,expense
+2024-08-08,DISCORD* NITRO,9.99,Entertainment,expense
+2024-08-08,DUNKIN #348291,4.89,Food & dining,expense
+2024-08-09,DUNKIN #348291,6.19,Food & dining,expense
+2024-08-09,EXXONMOBIL 4410,58.22,Transport,expense
+2024-08-09,KROGER #512,100.35,Food & dining,expense
+2024-08-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-08-11,CHIPOTLE 2210,13.70,Food & dining,expense
+2024-08-12,DUNKIN #348291,5.49,Food & dining,expense
+2024-08-12,STARBUCKS STORE 1182,6.73,Food & dining,expense
+2024-08-14,DUNKIN #348291,5.49,Food & dining,expense
+2024-08-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-08-16,ACME CORP PAYROLL,2350.00,Salary,income
+2024-08-16,EXXONMOBIL 4410,41.00,Transport,expense
+2024-08-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-08-20,CHIPOTLE 2210,47.97,Food & dining,expense
+2024-08-20,DUNKIN #348291,6.19,Food & dining,expense
+2024-08-21,DUKE ENERGY BILL PAY,159.33,Bills & utilities,expense
+2024-08-21,DUNKIN #348291,5.49,Food & dining,expense
+2024-08-22,DUNKIN #348291,5.49,Food & dining,expense
+2024-08-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-08-22,STARBUCKS STORE 1182,9.28,Food & dining,expense
+2024-08-23,DUNKIN #348291,5.49,Food & dining,expense
+2024-08-24,UBER *TRIP,29.68,Transport,expense
+2024-08-25,ATT*BILL PAYMENT,86.27,Bills & utilities,expense
+2024-08-26,SPEEDWAY 8827,58.73,Transport,expense
+2024-08-27,DUNKIN #348291,4.89,Food & dining,expense
+2024-08-29,DUNKIN #348291,4.89,Food & dining,expense
+2024-08-30,ACME CORP PAYROLL,2350.00,Salary,income
+2024-08-30,EXXONMOBIL 4410,61.91,Transport,expense
+2024-08-31,SPEEDWAY 8827,47.57,Transport,expense
+2024-09-01,DUNKIN #348291,5.49,Food & dining,expense
+2024-09-01,SHELL OIL 574412,46.91,Transport,expense
+2024-09-01,STARBUCKS STORE 1182,9.22,Food & dining,expense
+2024-09-02,AMAZON.COM*2K4LP,36.93,Shopping,expense
+2024-09-02,DUNKIN #348291,5.49,Food & dining,expense
+2024-09-02,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2024-09-02,STARBUCKS STORE 1182,9.43,Food & dining,expense
+2024-09-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-09-04,AMAZON.COM*2K4LP,94.88,Shopping,expense
+2024-09-04,DUNKIN #348291,5.49,Food & dining,expense
+2024-09-04,EXXONMOBIL 4410,53.08,Transport,expense
+2024-09-04,WAL-MART SUPERCENTER,82.84,Food & dining,expense
+2024-09-05,DUNKIN #348291,5.49,Food & dining,expense
+2024-09-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-09-05,STARBUCKS STORE 1182,4.66,Food & dining,expense
+2024-09-06,PUBLIX #1204,119.68,Food & dining,expense
+2024-09-06,UBER *TRIP,26.05,Transport,expense
+2024-09-07,ALDI 77031,47.68,Food & dining,expense
+2024-09-08,DISCORD* NITRO,9.99,Entertainment,expense
+2024-09-08,DUNKIN #348291,6.19,Food & dining,expense
+2024-09-08,SHELL OIL 574412,45.91,Transport,expense
+2024-09-09,HOME DEPOT #4107,68.55,Shopping,expense
+2024-09-09,MISTER CAR WASH #112,18.00,Transport,expense
+2024-09-11,ALDI 77031,128.08,Food & dining,expense
+2024-09-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-09-11,DUNKIN #348291,4.89,Food & dining,expense
+2024-09-12,DUNKIN #348291,5.49,Food & dining,expense
+2024-09-12,PUBLIX #1204,113.77,Food & dining,expense
+2024-09-13,ACME CORP PAYROLL,2350.00,Salary,income
+2024-09-13,SHELL OIL 574412,36.88,Transport,expense
+2024-09-14,DUNKIN #348291,5.49,Food & dining,expense
+2024-09-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-09-14,STARBUCKS STORE 1182,8.45,Food & dining,expense
+2024-09-16,DUNKIN #348291,5.49,Food & dining,expense
+2024-09-17,DUNKIN #348291,6.19,Food & dining,expense
+2024-09-17,MCDONALD'S F1873,47.83,Food & dining,expense
+2024-09-17,PUBLIX #1204,117.83,Food & dining,expense
+2024-09-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-09-18,DUNKIN #348291,4.89,Food & dining,expense
+2024-09-19,UBER *TRIP,14.20,Transport,expense
+2024-09-20,UBER *TRIP,11.62,Transport,expense
+2024-09-21,DUNKIN #348291,5.49,Food & dining,expense
+2024-09-22,DUKE ENERGY BILL PAY,73.25,Bills & utilities,expense
+2024-09-23,DUNKIN #348291,4.89,Food & dining,expense
+2024-09-23,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-09-23,PUBLIX #1204,93.79,Food & dining,expense
+2024-09-24,STARBUCKS STORE 1182,7.92,Food & dining,expense
+2024-09-25,ATT*BILL PAYMENT,91.30,Bills & utilities,expense
+2024-09-25,EXXONMOBIL 4410,59.88,Transport,expense
+2024-09-26,DUNKIN #348291,4.89,Food & dining,expense
+2024-09-26,SHELL OIL 574412,32.22,Transport,expense
+2024-09-26,TARGET 00019283,62.58,Shopping,expense
+2024-09-27,ACME CORP PAYROLL,2350.00,Salary,income
+2024-09-28,PUBLIX #1204,33.71,Food & dining,expense
+2024-09-28,STARBUCKS STORE 1182,7.16,Food & dining,expense
+2024-09-30,DUNKIN #348291,4.89,Food & dining,expense
+2024-10-01,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2024-10-02,TACO BELL 031,20.34,Food & dining,expense
+2024-10-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-10-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-10-06,DISCORD* NITRO,9.99,Entertainment,expense
+2024-10-07,DUNKIN #348291,5.49,Food & dining,expense
+2024-10-07,MISTER CAR WASH #112,18.00,Transport,expense
+2024-10-08,BEST BUY 00381,29.68,Shopping,expense
+2024-10-08,DUNKIN #348291,5.49,Food & dining,expense
+2024-10-08,STARBUCKS STORE 1182,4.32,Food & dining,expense
+2024-10-09,ALDI 77031,147.21,Food & dining,expense
+2024-10-10,ALDI 77031,60.91,Food & dining,expense
+2024-10-10,DUNKIN #348291,5.49,Food & dining,expense
+2024-10-11,ACME CORP PAYROLL,2350.00,Salary,income
+2024-10-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-10-14,DUNKIN #348291,5.49,Food & dining,expense
+2024-10-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-10-16,DUNKIN #348291,6.19,Food & dining,expense
+2024-10-16,EXXONMOBIL 4410,33.05,Transport,expense
+2024-10-17,DUNKIN #348291,5.49,Food & dining,expense
+2024-10-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-10-18,STARBUCKS STORE 1182,9.24,Food & dining,expense
+2024-10-19,DUKE ENERGY BILL PAY,123.11,Bills & utilities,expense
+2024-10-20,DUNKIN #348291,4.89,Food & dining,expense
+2024-10-20,STARBUCKS STORE 1182,5.66,Food & dining,expense
+2024-10-22,ALDI 77031,61.04,Food & dining,expense
+2024-10-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-10-22,OLIVE GARDEN 0412,11.02,Food & dining,expense
+2024-10-23,UBER *TRIP,25.77,Transport,expense
+2024-10-25,ACME CORP PAYROLL,2350.00,Salary,income
+2024-10-25,ATT*BILL PAYMENT,84.60,Bills & utilities,expense
+2024-10-25,DUNKIN #348291,5.49,Food & dining,expense
+2024-10-26,EXXONMOBIL 4410,56.73,Transport,expense
+2024-10-26,UBER *TRIP,24.36,Transport,expense
+2024-10-27,EXXONMOBIL 4410,57.42,Transport,expense
+2024-10-28,CVS/PHARMACY #08821,36.53,Health,expense
+2024-10-28,UBER *TRIP,16.10,Transport,expense
+2024-10-29,PUBLIX #1204,37.63,Food & dining,expense
+2024-10-31,ALDI 77031,36.42,Food & dining,expense
+2024-10-31,APPLE.COM/BILL APP STORE,9.99,Other,expense
+2024-10-31,UBER *TRIP,14.83,Transport,expense
+2024-11-01,AMAZON.COM*2K4LP,109.80,Shopping,expense
+2024-11-01,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2024-11-02,MCDONALD'S F1873,12.12,Food & dining,expense
+2024-11-03,DUNKIN #348291,6.19,Food & dining,expense
+2024-11-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-11-04,STARBUCKS STORE 1182,6.94,Food & dining,expense
+2024-11-05,KROGER #512,131.70,Food & dining,expense
+2024-11-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-11-05,SPEEDWAY 8827,34.77,Transport,expense
+2024-11-05,TARGET 00019283,78.38,Shopping,expense
+2024-11-06,DISCORD* NITRO,9.99,Entertainment,expense
+2024-11-08,ACME CORP PAYROLL,2350.00,Salary,income
+2024-11-09,DUNKIN #348291,5.49,Food & dining,expense
+2024-11-09,HOME DEPOT #4107,139.09,Shopping,expense
+2024-11-10,DUNKIN #348291,5.49,Food & dining,expense
+2024-11-10,SHELL OIL 574412,61.03,Transport,expense
+2024-11-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-11-12,DUNKIN #348291,5.49,Food & dining,expense
+2024-11-14,DUNKIN #348291,5.49,Food & dining,expense
+2024-11-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-11-14,PUBLIX #1204,34.51,Food & dining,expense
+2024-11-14,STARBUCKS STORE 1182,9.35,Food & dining,expense
+2024-11-15,DUNKIN #348291,4.89,Food & dining,expense
+2024-11-15,UBER *TRIP,16.71,Transport,expense
+2024-11-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-11-18,ALDI 77031,149.43,Food & dining,expense
+2024-11-18,MISTER CAR WASH #112,18.00,Transport,expense
+2024-11-18,TARGET 00019283,103.14,Shopping,expense
+2024-11-19,DUNKIN #348291,5.49,Food & dining,expense
+2024-11-20,CHIPOTLE 2210,10.72,Food & dining,expense
+2024-11-20,SHELL OIL 574412,45.11,Transport,expense
+2024-11-20,TARGET 00019283,105.07,Shopping,expense
+2024-11-22,ACME CORP PAYROLL,2350.00,Salary,income
+2024-11-22,DUKE ENERGY BILL PAY,166.29,Bills & utilities,expense
+2024-11-22,DUNKIN #348291,5.49,Food & dining,expense
+2024-11-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-11-22,UBER *TRIP,31.34,Transport,expense
+2024-11-23,DUNKIN #348291,6.19,Food & dining,expense
+2024-11-25,ATT*BILL PAYMENT,89.02,Bills & utilities,expense
+2024-11-25,UBER *TRIP,24.44,Transport,expense
+2024-11-25,WAL-MART SUPERCENTER,125.38,Food & dining,expense
+2024-11-30,STARBUCKS STORE 1182,5.08,Food & dining,expense
+2024-12-01,CHIPOTLE 2210,34.92,Food & dining,expense
+2024-12-01,DUNKIN #348291,6.19,Food & dining,expense
+2024-12-01,PUBLIX #1204,93.10,Food & dining,expense
+2024-12-02,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2024-12-02,PANERA BREAD #2201,42.21,Food & dining,expense
+2024-12-03,DUNKIN #348291,5.49,Food & dining,expense
+2024-12-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2024-12-03,OLIVE GARDEN 0412,11.41,Food & dining,expense
+2024-12-04,DUNKIN #348291,5.49,Food & dining,expense
+2024-12-04,TARGET 00019283,55.33,Shopping,expense
+2024-12-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2024-12-06,ACME CORP PAYROLL,2350.00,Salary,income
+2024-12-06,STARBUCKS STORE 1182,5.40,Food & dining,expense
+2024-12-06,TARGET 00019283,104.89,Shopping,expense
+2024-12-07,DUNKIN #348291,5.49,Food & dining,expense
+2024-12-07,SHELL OIL 574412,56.91,Transport,expense
+2024-12-08,DUNKIN #348291,5.49,Food & dining,expense
+2024-12-09,ALDI 77031,133.61,Food & dining,expense
+2024-12-10,DISCORD* NITRO,9.99,Entertainment,expense
+2024-12-10,DUNKIN #348291,5.49,Food & dining,expense
+2024-12-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2024-12-11,STARBUCKS STORE 1182,7.25,Food & dining,expense
+2024-12-13,DUNKIN #348291,5.49,Food & dining,expense
+2024-12-14,MCDONALD'S F1873,21.12,Food & dining,expense
+2024-12-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2024-12-16,DUNKIN #348291,4.89,Food & dining,expense
+2024-12-17,CVS/PHARMACY #08821,17.07,Health,expense
+2024-12-17,DUNKIN #348291,5.49,Food & dining,expense
+2024-12-17,SPOTIFY USA,11.99,Entertainment,expense
+2024-12-18,MISTER CAR WASH #112,18.00,Transport,expense
+2024-12-18,STARBUCKS STORE 1182,6.13,Food & dining,expense
+2024-12-20,ACME CORP PAYROLL,2350.00,Salary,income
+2024-12-20,BONUS ACME CORP,1800.00,Salary,income
+2024-12-20,MCDONALD'S F1873,27.63,Food & dining,expense
+2024-12-20,SHELL OIL 574412,58.58,Transport,expense
+2024-12-20,UBER *TRIP,9.80,Transport,expense
+2024-12-22,DUKE ENERGY BILL PAY,176.91,Bills & utilities,expense
+2024-12-23,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2024-12-24,DUNKIN #348291,5.49,Food & dining,expense
+2024-12-25,ATT*BILL PAYMENT,92.42,Bills & utilities,expense
+2024-12-25,CVS/PHARMACY #08821,32.84,Health,expense
+2024-12-25,DUNKIN #348291,4.89,Food & dining,expense
+2024-12-28,DUNKIN #348291,5.49,Food & dining,expense
+2024-12-28,MCDONALD'S F1873,17.39,Food & dining,expense
+2025-01-01,DUNKIN #348291,5.49,Food & dining,expense
+2025-01-01,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2025-01-01,SHELL OIL 574412,37.01,Transport,expense
+2025-01-03,ACME CORP PAYROLL,2350.00,Salary,income
+2025-01-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-01-03,STARBUCKS STORE 1182,4.52,Food & dining,expense
+2025-01-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-01-05,STARBUCKS STORE 1182,7.16,Food & dining,expense
+2025-01-07,DUNKIN #348291,5.49,Food & dining,expense
+2025-01-08,PLANET FITNESS CLUB FEE,49.00,Health,expense
+2025-01-08,STARBUCKS STORE 1182,4.82,Food & dining,expense
+2025-01-09,DUNKIN #348291,4.89,Food & dining,expense
+2025-01-10,DISCORD* NITRO,9.99,Entertainment,expense
+2025-01-10,DUNKIN #348291,5.49,Food & dining,expense
+2025-01-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-01-11,CVS/PHARMACY #08821,38.70,Health,expense
+2025-01-11,DUNKIN #348291,6.19,Food & dining,expense
+2025-01-11,SHELL OIL 574412,54.92,Transport,expense
+2025-01-12,KROGER #512,42.60,Food & dining,expense
+2025-01-13,SPEEDWAY 8827,35.70,Transport,expense
+2025-01-13,TARGET 00019283,8.68,Shopping,expense
+2025-01-14,DUNKIN #348291,5.49,Food & dining,expense
+2025-01-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2025-01-16,DUNKIN #348291,5.49,Food & dining,expense
+2025-01-16,MISTER CAR WASH #112,18.00,Transport,expense
+2025-01-16,STARBUCKS STORE 1182,5.57,Food & dining,expense
+2025-01-17,ACME CORP PAYROLL,2350.00,Salary,income
+2025-01-17,EXXONMOBIL 4410,40.98,Transport,expense
+2025-01-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-01-18,DUNKIN #348291,5.49,Food & dining,expense
+2025-01-18,SHELL OIL 574412,38.52,Transport,expense
+2025-01-20,DUKE ENERGY BILL PAY,180.14,Bills & utilities,expense
+2025-01-20,DUNKIN #348291,5.49,Food & dining,expense
+2025-01-21,STARBUCKS STORE 1182,9.76,Food & dining,expense
+2025-01-22,DUNKIN #348291,6.19,Food & dining,expense
+2025-01-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-01-22,STARBUCKS STORE 1182,5.56,Food & dining,expense
+2025-01-23,STARBUCKS STORE 1182,6.72,Food & dining,expense
+2025-01-25,ATT*BILL PAYMENT,91.32,Bills & utilities,expense
+2025-01-26,STARBUCKS STORE 1182,8.30,Food & dining,expense
+2025-01-27,DUNKIN #348291,5.49,Food & dining,expense
+2025-01-30,BEST BUY 00381,100.21,Shopping,expense
+2025-01-30,DUNKIN #348291,4.89,Food & dining,expense
+2025-01-30,STARBUCKS STORE 1182,5.53,Food & dining,expense
+2025-01-31,ACME CORP PAYROLL,2350.00,Salary,income
+2025-02-01,DUNKIN #348291,5.49,Food & dining,expense
+2025-02-02,STARBUCKS STORE 1182,5.75,Food & dining,expense
+2025-02-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-02-03,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2025-02-03,STARBUCKS STORE 1182,6.60,Food & dining,expense
+2025-02-04,DUNKIN #348291,6.19,Food & dining,expense
+2025-02-05,MCDONALD'S F1873,13.95,Food & dining,expense
+2025-02-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-02-06,DISCORD* NITRO,9.99,Entertainment,expense
+2025-02-06,KROGER #512,124.05,Food & dining,expense
+2025-02-08,DUNKIN #348291,5.49,Food & dining,expense
+2025-02-08,TACO BELL 031,28.18,Food & dining,expense
+2025-02-09,STARBUCKS STORE 1182,5.19,Food & dining,expense
+2025-02-10,DUNKIN #348291,4.89,Food & dining,expense
+2025-02-10,OLIVE GARDEN 0412,20.65,Food & dining,expense
+2025-02-10,SPEEDWAY 8827,41.85,Transport,expense
+2025-02-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-02-11,STARBUCKS STORE 1182,9.33,Food & dining,expense
+2025-02-12,STARBUCKS STORE 1182,6.99,Food & dining,expense
+2025-02-14,ACME CORP PAYROLL,2350.00,Salary,income
+2025-02-14,DUNKIN #348291,4.89,Food & dining,expense
+2025-02-14,NETFLIX.COM 866-579-7172 CA,15.49,Entertainment,expense
+2025-02-15,MCDONALD'S F1873,9.35,Food & dining,expense
+2025-02-15,WAL-MART SUPERCENTER,86.01,Food & dining,expense
+2025-02-16,DUNKIN #348291,6.19,Food & dining,expense
+2025-02-17,ALDI 77031,116.35,Food & dining,expense
+2025-02-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-02-18,DUNKIN #348291,5.49,Food & dining,expense
+2025-02-19,DUNKIN #348291,6.19,Food & dining,expense
+2025-02-19,PUBLIX #1204,154.49,Food & dining,expense
+2025-02-20,WAL-MART SUPERCENTER,124.73,Food & dining,expense
+2025-02-22,DUKE ENERGY BILL PAY,102.95,Bills & utilities,expense
+2025-02-22,DUNKIN #348291,6.19,Food & dining,expense
+2025-02-23,DUNKIN #348291,5.49,Food & dining,expense
+2025-02-23,MISTER CAR WASH #112,18.00,Transport,expense
+2025-02-23,PUBLIX #1204,109.48,Food & dining,expense
+2025-02-24,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-02-25,ATT*BILL PAYMENT,91.04,Bills & utilities,expense
+2025-02-25,STARBUCKS STORE 1182,8.21,Food & dining,expense
+2025-02-26,DUNKIN #348291,5.49,Food & dining,expense
+2025-02-27,DUNKIN #348291,4.89,Food & dining,expense
+2025-02-28,ACME CORP PAYROLL,2350.00,Salary,income
+2025-02-28,CVS/PHARMACY #08821,37.84,Health,expense
+2025-02-28,DUNKIN #348291,6.19,Food & dining,expense
+2025-02-28,KROGER #512,125.91,Food & dining,expense
+2025-03-01,DUNKIN #348291,6.19,Food & dining,expense
+2025-03-02,PUBLIX #1204,121.02,Food & dining,expense
+2025-03-03,DUNKIN #348291,5.49,Food & dining,expense
+2025-03-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-03-03,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2025-03-05,DUNKIN #348291,5.49,Food & dining,expense
+2025-03-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-03-07,WAL-MART SUPERCENTER,105.29,Food & dining,expense
+2025-03-08,DISCORD* NITRO,9.99,Entertainment,expense
+2025-03-09,DUNKIN #348291,6.19,Food & dining,expense
+2025-03-10,OLIVE GARDEN 0412,41.04,Food & dining,expense
+2025-03-10,UBER *TRIP,20.84,Transport,expense
+2025-03-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-03-11,DUNKIN #348291,5.49,Food & dining,expense
+2025-03-13,STARBUCKS STORE 1182,9.31,Food & dining,expense
+2025-03-13,UBER *TRIP,8.00,Transport,expense
+2025-03-14,ACME CORP PAYROLL,2350.00,Salary,income
+2025-03-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-03-16,DUNKIN #348291,5.49,Food & dining,expense
+2025-03-17,DUKE ENERGY BILL PAY,167.80,Bills & utilities,expense
+2025-03-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-03-18,DUNKIN #348291,5.49,Food & dining,expense
+2025-03-18,SPEEDWAY 8827,44.79,Transport,expense
+2025-03-19,CVS/PHARMACY #08821,41.47,Health,expense
+2025-03-19,SPEEDWAY 8827,38.98,Transport,expense
+2025-03-19,WAL-MART SUPERCENTER,24.56,Food & dining,expense
+2025-03-20,CHIPOTLE 2210,42.20,Food & dining,expense
+2025-03-21,DUNKIN #348291,5.49,Food & dining,expense
+2025-03-22,DUNKIN #348291,6.19,Food & dining,expense
+2025-03-22,UBER *TRIP,25.22,Transport,expense
+2025-03-23,DOORDASH*ORDER,44.51,Food & dining,expense
+2025-03-24,CHIPOTLE 2210,27.85,Food & dining,expense
+2025-03-24,DUNKIN #348291,5.49,Food & dining,expense
+2025-03-24,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-03-24,WAL-MART SUPERCENTER,147.94,Food & dining,expense
+2025-03-25,ATT*BILL PAYMENT,91.47,Bills & utilities,expense
+2025-03-25,DUNKIN #348291,5.49,Food & dining,expense
+2025-03-25,KROGER #512,137.28,Food & dining,expense
+2025-03-26,AMAZON.COM*2K4LP,115.44,Shopping,expense
+2025-03-26,STARBUCKS STORE 1182,7.90,Food & dining,expense
+2025-03-28,ACME CORP PAYROLL,2350.00,Salary,income
+2025-03-30,STARBUCKS STORE 1182,6.96,Food & dining,expense
+2025-03-31,DUNKIN #348291,6.19,Food & dining,expense
+2025-04-01,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2025-04-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-04-03,KROGER #512,26.93,Food & dining,expense
+2025-04-04,MISTER CAR WASH #112,18.00,Transport,expense
+2025-04-04,UBER *TRIP,26.07,Transport,expense
+2025-04-05,CVS/PHARMACY #08821,18.30,Health,expense
+2025-04-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-04-07,WAL-MART SUPERCENTER,66.01,Food & dining,expense
+2025-04-08,DUNKIN #348291,5.49,Food & dining,expense
+2025-04-10,DISCORD* NITRO,9.99,Entertainment,expense
+2025-04-11,ACME CORP PAYROLL,2350.00,Salary,income
+2025-04-11,AMAZON.COM*2K4LP,8.93,Shopping,expense
+2025-04-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-04-12,AMAZON PRIME*MEMBERSHIP,149.00,Shopping,expense
+2025-04-12,APPLE.COM/BILL APP STORE,9.99,Other,expense
+2025-04-12,TARGET 00019283,136.85,Shopping,expense
+2025-04-12,WAL-MART SUPERCENTER,117.44,Food & dining,expense
+2025-04-13,WAL-MART SUPERCENTER,143.08,Food & dining,expense
+2025-04-14,DOORDASH*ORDER,43.42,Food & dining,expense
+2025-04-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-04-15,DUNKIN #348291,5.49,Food & dining,expense
+2025-04-16,STARBUCKS STORE 1182,7.34,Food & dining,expense
+2025-04-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-04-17,TACO BELL 031,33.64,Food & dining,expense
+2025-04-18,KROGER #512,37.35,Food & dining,expense
+2025-04-20,AMAZON.COM*2K4LP,118.31,Shopping,expense
+2025-04-20,DUKE ENERGY BILL PAY,59.84,Bills & utilities,expense
+2025-04-20,DUNKIN #348291,5.49,Food & dining,expense
+2025-04-20,SHELL OIL 574412,35.19,Transport,expense
+2025-04-21,DUNKIN #348291,5.49,Food & dining,expense
+2025-04-22,ALDI 77031,40.09,Food & dining,expense
+2025-04-22,DUNKIN #348291,6.19,Food & dining,expense
+2025-04-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-04-23,DUNKIN #348291,5.49,Food & dining,expense
+2025-04-23,STARBUCKS STORE 1182,9.76,Food & dining,expense
+2025-04-24,SPEEDWAY 8827,35.98,Transport,expense
+2025-04-25,ACME CORP PAYROLL,2350.00,Salary,income
+2025-04-25,ATT*BILL PAYMENT,89.95,Bills & utilities,expense
+2025-04-25,DUNKIN #348291,5.49,Food & dining,expense
+2025-04-25,SPEEDWAY 8827,55.61,Transport,expense
+2025-04-26,DUNKIN #348291,6.19,Food & dining,expense
+2025-04-26,WAL-MART SUPERCENTER,92.09,Food & dining,expense
+2025-04-28,ALDI 77031,101.56,Food & dining,expense
+2025-04-28,EXXONMOBIL 4410,33.29,Transport,expense
+2025-04-29,DOORDASH*ORDER,32.59,Food & dining,expense
+2025-04-29,DUNKIN #348291,5.49,Food & dining,expense
+2025-04-30,ALDI 77031,99.72,Food & dining,expense
+2025-04-30,DUNKIN #348291,5.49,Food & dining,expense
+2025-05-01,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2025-05-01,OLIVE GARDEN 0412,29.96,Food & dining,expense
+2025-05-01,PUBLIX #1204,125.99,Food & dining,expense
+2025-05-02,DUNKIN #348291,6.19,Food & dining,expense
+2025-05-02,SHELL OIL 574412,40.93,Transport,expense
+2025-05-03,DUNKIN #348291,5.49,Food & dining,expense
+2025-05-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-05-03,PUBLIX #1204,63.49,Food & dining,expense
+2025-05-04,STARBUCKS STORE 1182,5.49,Food & dining,expense
+2025-05-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-05-07,DUNKIN #348291,4.89,Food & dining,expense
+2025-05-07,STARBUCKS STORE 1182,8.62,Food & dining,expense
+2025-05-08,DISCORD* NITRO,9.99,Entertainment,expense
+2025-05-08,OLIVE GARDEN 0412,47.04,Food & dining,expense
+2025-05-09,ACME CORP PAYROLL,2350.00,Salary,income
+2025-05-10,DUNKIN #348291,5.49,Food & dining,expense
+2025-05-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-05-11,DUNKIN #348291,5.49,Food & dining,expense
+2025-05-11,STARBUCKS STORE 1182,9.64,Food & dining,expense
+2025-05-12,PANERA BREAD #2201,34.75,Food & dining,expense
+2025-05-14,MISTER CAR WASH #112,18.00,Transport,expense
+2025-05-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-05-16,STARBUCKS STORE 1182,8.89,Food & dining,expense
+2025-05-17,ALDI 77031,35.89,Food & dining,expense
+2025-05-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-05-18,STARBUCKS STORE 1182,7.09,Food & dining,expense
+2025-05-21,DUKE ENERGY BILL PAY,106.87,Bills & utilities,expense
+2025-05-21,UBER *TRIP,27.24,Transport,expense
+2025-05-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-05-23,ACME CORP PAYROLL,2350.00,Salary,income
+2025-05-23,HOME DEPOT #4107,30.19,Shopping,expense
+2025-05-24,KROGER #512,141.75,Food & dining,expense
+2025-05-25,ATT*BILL PAYMENT,85.30,Bills & utilities,expense
+2025-05-25,DUNKIN #348291,5.49,Food & dining,expense
+2025-05-25,STARBUCKS STORE 1182,7.43,Food & dining,expense
+2025-05-27,TACO BELL 031,20.26,Food & dining,expense
+2025-05-30,DUNKIN #348291,4.89,Food & dining,expense
+2025-06-01,DUNKIN #348291,5.49,Food & dining,expense
+2025-06-01,STARBUCKS STORE 1182,5.65,Food & dining,expense
+2025-06-02,NAVY FEDERAL INS AUTO,142.37,Bills & utilities,expense
+2025-06-02,STARBUCKS STORE 1182,9.16,Food & dining,expense
+2025-06-03,DUNKIN #348291,5.49,Food & dining,expense
+2025-06-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-06-03,STARBUCKS STORE 1182,9.41,Food & dining,expense
+2025-06-03,UBER *TRIP,24.00,Transport,expense
+2025-06-04,DUNKIN #348291,5.49,Food & dining,expense
+2025-06-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-06-05,STARBUCKS STORE 1182,8.08,Food & dining,expense
+2025-06-06,ACME CORP PAYROLL,2350.00,Salary,income
+2025-06-07,DISCORD* NITRO,9.99,Entertainment,expense
+2025-06-07,SHELL OIL 574412,49.55,Transport,expense
+2025-06-08,DUNKIN #348291,5.49,Food & dining,expense
+2025-06-10,DUNKIN #348291,5.49,Food & dining,expense
+2025-06-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-06-11,DUNKIN #348291,5.49,Food & dining,expense
+2025-06-12,STARBUCKS STORE 1182,7.98,Food & dining,expense
+2025-06-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-06-15,DUNKIN #348291,4.89,Food & dining,expense
+2025-06-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-06-17,WAL-MART SUPERCENTER,102.23,Food & dining,expense
+2025-06-18,DUNKIN #348291,5.49,Food & dining,expense
+2025-06-20,ACME CORP PAYROLL,2350.00,Salary,income
+2025-06-21,DUNKIN #348291,5.49,Food & dining,expense
+2025-06-21,SPEEDWAY 8827,51.19,Transport,expense
+2025-06-22,DUKE ENERGY BILL PAY,157.88,Bills & utilities,expense
+2025-06-22,DUNKIN #348291,6.19,Food & dining,expense
+2025-06-23,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-06-24,MISTER CAR WASH #112,18.00,Transport,expense
+2025-06-25,ATT*BILL PAYMENT,91.28,Bills & utilities,expense
+2025-06-25,DUNKIN #348291,5.49,Food & dining,expense
+2025-06-28,SPEEDWAY 8827,33.31,Transport,expense
+2025-07-01,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-01,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2025-07-01,STARBUCKS STORE 1182,8.61,Food & dining,expense
+2025-07-02,TACO BELL 031,33.23,Food & dining,expense
+2025-07-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-07-04,ACME CORP PAYROLL,2350.00,Salary,income
+2025-07-04,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-05,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-07-06,EXXONMOBIL 4410,55.52,Transport,expense
+2025-07-07,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-07,TACO BELL 031,11.90,Food & dining,expense
+2025-07-08,DISCORD* NITRO,9.99,Entertainment,expense
+2025-07-10,WAL-MART SUPERCENTER,103.19,Food & dining,expense
+2025-07-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-07-11,UBER *TRIP,8.83,Transport,expense
+2025-07-12,ALDI 77031,72.84,Food & dining,expense
+2025-07-12,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-13,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-13,TACO BELL 031,37.59,Food & dining,expense
+2025-07-14,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-07-17,ALDI 77031,41.99,Food & dining,expense
+2025-07-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-07-17,STARBUCKS STORE 1182,5.09,Food & dining,expense
+2025-07-18,ACME CORP PAYROLL,2350.00,Salary,income
+2025-07-18,BEST BUY 00381,26.19,Shopping,expense
+2025-07-18,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-18,EXXONMOBIL 4410,55.01,Transport,expense
+2025-07-19,DUKE ENERGY BILL PAY,114.17,Bills & utilities,expense
+2025-07-19,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-21,UBER *TRIP,33.13,Transport,expense
+2025-07-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-07-23,DUNKIN #348291,6.19,Food & dining,expense
+2025-07-23,SPEEDWAY 8827,42.37,Transport,expense
+2025-07-24,PUBLIX #1204,96.89,Food & dining,expense
+2025-07-25,ATT*BILL PAYMENT,84.90,Bills & utilities,expense
+2025-07-25,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-26,SPEEDWAY 8827,43.86,Transport,expense
+2025-07-26,STARBUCKS STORE 1182,5.60,Food & dining,expense
+2025-07-27,SHELL OIL 574412,38.92,Transport,expense
+2025-07-28,DUNKIN #348291,5.49,Food & dining,expense
+2025-07-28,SPEEDWAY 8827,39.02,Transport,expense
+2025-07-31,DUNKIN #348291,5.49,Food & dining,expense
+2025-08-01,ACME CORP PAYROLL,2350.00,Salary,income
+2025-08-01,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2025-08-01,STARBUCKS STORE 1182,9.67,Food & dining,expense
+2025-08-02,BEST BUY 00381,134.70,Shopping,expense
+2025-08-02,UBER *TRIP,21.70,Transport,expense
+2025-08-03,CVS/PHARMACY #08821,15.93,Health,expense
+2025-08-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-08-04,DUNKIN #348291,5.49,Food & dining,expense
+2025-08-05,DUNKIN #348291,4.89,Food & dining,expense
+2025-08-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-08-06,DISCORD* NITRO,9.99,Entertainment,expense
+2025-08-06,MISTER CAR WASH #112,18.00,Transport,expense
+2025-08-07,DUNKIN #348291,5.49,Food & dining,expense
+2025-08-08,ALDI 77031,49.17,Food & dining,expense
+2025-08-08,DUNKIN #348291,5.49,Food & dining,expense
+2025-08-09,DUNKIN #348291,4.89,Food & dining,expense
+2025-08-10,DUNKIN #348291,4.89,Food & dining,expense
+2025-08-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-08-11,DUNKIN #348291,5.49,Food & dining,expense
+2025-08-12,SHELL OIL 574412,40.82,Transport,expense
+2025-08-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-08-14,STARBUCKS STORE 1182,5.87,Food & dining,expense
+2025-08-14,UBER *TRIP,11.84,Transport,expense
+2025-08-15,ACME CORP PAYROLL,2350.00,Salary,income
+2025-08-15,PUBLIX #1204,51.88,Food & dining,expense
+2025-08-16,DUKE ENERGY BILL PAY,180.48,Bills & utilities,expense
+2025-08-16,DUNKIN #348291,4.89,Food & dining,expense
+2025-08-17,DUNKIN #348291,5.49,Food & dining,expense
+2025-08-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-08-18,DUNKIN #348291,5.49,Food & dining,expense
+2025-08-19,ALDI 77031,41.07,Food & dining,expense
+2025-08-19,STARBUCKS STORE 1182,8.85,Food & dining,expense
+2025-08-20,MCDONALD'S F1873,13.54,Food & dining,expense
+2025-08-21,DUNKIN #348291,4.89,Food & dining,expense
+2025-08-22,DUNKIN #348291,5.49,Food & dining,expense
+2025-08-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-08-23,DUNKIN #348291,4.89,Food & dining,expense
+2025-08-25,ATT*BILL PAYMENT,89.03,Bills & utilities,expense
+2025-08-25,DUNKIN #348291,5.49,Food & dining,expense
+2025-08-26,KROGER #512,120.45,Food & dining,expense
+2025-08-27,AMAZON.COM*2K4LP,137.89,Shopping,expense
+2025-08-27,KROGER #512,105.92,Food & dining,expense
+2025-08-27,SHELL OIL 574412,49.20,Transport,expense
+2025-08-28,MCDONALD'S F1873,14.16,Food & dining,expense
+2025-08-29,ACME CORP PAYROLL,2350.00,Salary,income
+2025-08-29,EXXONMOBIL 4410,61.23,Transport,expense
+2025-08-30,SHELL OIL 574412,44.24,Transport,expense
+2025-08-31,CVS/PHARMACY #08821,32.77,Health,expense
+2025-09-01,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2025-09-02,DUNKIN #348291,5.49,Food & dining,expense
+2025-09-02,EXXONMOBIL 4410,49.79,Transport,expense
+2025-09-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-09-04,MISTER CAR WASH #112,18.00,Transport,expense
+2025-09-05,DUNKIN #348291,5.49,Food & dining,expense
+2025-09-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-09-06,WAL-MART SUPERCENTER,72.03,Food & dining,expense
+2025-09-07,STARBUCKS STORE 1182,4.63,Food & dining,expense
+2025-09-09,DISCORD* NITRO,9.99,Entertainment,expense
+2025-09-09,KROGER #512,71.30,Food & dining,expense
+2025-09-09,SHELL OIL 574412,48.42,Transport,expense
+2025-09-10,HOME DEPOT #4107,25.57,Shopping,expense
+2025-09-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-09-12,ACME CORP PAYROLL,2350.00,Salary,income
+2025-09-13,SPEEDWAY 8827,61.22,Transport,expense
+2025-09-14,DUNKIN #348291,5.49,Food & dining,expense
+2025-09-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-09-15,DUNKIN #348291,5.49,Food & dining,expense
+2025-09-16,DUNKIN #348291,5.49,Food & dining,expense
+2025-09-17,AMAZON.COM*2K4LP,101.92,Shopping,expense
+2025-09-17,DUNKIN #348291,5.49,Food & dining,expense
+2025-09-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-09-18,BEST BUY 00381,25.73,Shopping,expense
+2025-09-18,DUNKIN #348291,4.89,Food & dining,expense
+2025-09-18,MCDONALD'S F1873,27.90,Food & dining,expense
+2025-09-18,SHELL OIL 574412,35.60,Transport,expense
+2025-09-19,MCDONALD'S F1873,29.04,Food & dining,expense
+2025-09-20,SHELL OIL 574412,34.89,Transport,expense
+2025-09-21,AMAZON.COM*2K4LP,50.71,Shopping,expense
+2025-09-21,DUNKIN #348291,5.49,Food & dining,expense
+2025-09-21,STARBUCKS STORE 1182,5.71,Food & dining,expense
+2025-09-22,APPLE.COM/BILL APP STORE,4.99,Other,expense
+2025-09-22,DUKE ENERGY BILL PAY,167.17,Bills & utilities,expense
+2025-09-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-09-24,AMAZON.COM*2K4LP,60.51,Shopping,expense
+2025-09-25,ATT*BILL PAYMENT,85.59,Bills & utilities,expense
+2025-09-25,STARBUCKS STORE 1182,9.55,Food & dining,expense
+2025-09-26,ACME CORP PAYROLL,2350.00,Salary,income
+2025-09-26,SPEEDWAY 8827,38.30,Transport,expense
+2025-09-27,DUNKIN #348291,4.89,Food & dining,expense
+2025-09-28,DUNKIN #348291,5.49,Food & dining,expense
+2025-09-28,EXXONMOBIL 4410,44.72,Transport,expense
+2025-09-29,ALDI 77031,28.74,Food & dining,expense
+2025-09-30,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-01,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2025-10-02,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-10-04,ALDI 77031,74.97,Food & dining,expense
+2025-10-05,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-10-05,PUBLIX #1204,48.90,Food & dining,expense
+2025-10-05,SPEEDWAY 8827,47.57,Transport,expense
+2025-10-07,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-07,STARBUCKS STORE 1182,8.02,Food & dining,expense
+2025-10-07,TACO BELL 031,14.03,Food & dining,expense
+2025-10-08,DISCORD* NITRO,9.99,Entertainment,expense
+2025-10-08,DUNKIN #348291,4.89,Food & dining,expense
+2025-10-08,MISTER CAR WASH #112,18.00,Transport,expense
+2025-10-08,UBER *TRIP,20.62,Transport,expense
+2025-10-09,APPLE.COM/BILL APP STORE,2.99,Other,expense
+2025-10-09,PANERA BREAD #2201,28.51,Food & dining,expense
+2025-10-10,ACME CORP PAYROLL,2350.00,Salary,income
+2025-10-10,DOORDASH*ORDER,43.51,Food & dining,expense
+2025-10-10,STARBUCKS STORE 1182,5.65,Food & dining,expense
+2025-10-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-10-11,PUBLIX #1204,101.27,Food & dining,expense
+2025-10-12,DOORDASH*ORDER,30.50,Food & dining,expense
+2025-10-12,SPEEDWAY 8827,36.47,Transport,expense
+2025-10-13,ALDI 77031,130.89,Food & dining,expense
+2025-10-13,DUNKIN #348291,6.19,Food & dining,expense
+2025-10-14,DUNKIN #348291,4.89,Food & dining,expense
+2025-10-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-10-14,PANERA BREAD #2201,33.76,Food & dining,expense
+2025-10-15,AMAZON.COM*2K4LP,30.93,Shopping,expense
+2025-10-15,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-16,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-16,STARBUCKS STORE 1182,5.51,Food & dining,expense
+2025-10-16,TACO BELL 031,40.46,Food & dining,expense
+2025-10-17,APPLE.COM/BILL APP STORE,14.99,Other,expense
+2025-10-17,DUNKIN #348291,4.89,Food & dining,expense
+2025-10-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-10-18,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-19,EXXONMOBIL 4410,60.57,Transport,expense
+2025-10-20,DUKE ENERGY BILL PAY,71.03,Bills & utilities,expense
+2025-10-22,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-10-23,CHIPOTLE 2210,27.86,Food & dining,expense
+2025-10-23,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-24,ACME CORP PAYROLL,2350.00,Salary,income
+2025-10-24,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-24,SHELL OIL 574412,43.63,Transport,expense
+2025-10-25,ATT*BILL PAYMENT,84.54,Bills & utilities,expense
+2025-10-26,DUNKIN #348291,6.19,Food & dining,expense
+2025-10-26,PUBLIX #1204,44.55,Food & dining,expense
+2025-10-26,STARBUCKS STORE 1182,4.25,Food & dining,expense
+2025-10-27,DUNKIN #348291,6.19,Food & dining,expense
+2025-10-28,SPEEDWAY 8827,40.76,Transport,expense
+2025-10-29,CHIPOTLE 2210,15.28,Food & dining,expense
+2025-10-29,DUNKIN #348291,5.49,Food & dining,expense
+2025-10-31,MISTER CAR WASH #112,18.00,Transport,expense
+2025-11-01,DUNKIN #348291,5.49,Food & dining,expense
+2025-11-01,PANERA BREAD #2201,31.63,Food & dining,expense
+2025-11-01,PUBLIX #1204,43.10,Food & dining,expense
+2025-11-01,STARBUCKS STORE 1182,7.67,Food & dining,expense
+2025-11-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-11-03,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2025-11-04,DUNKIN #348291,5.49,Food & dining,expense
+2025-11-04,EXXONMOBIL 4410,36.83,Transport,expense
+2025-11-04,KROGER #512,147.78,Food & dining,expense
+2025-11-04,TARGET 00019283,108.44,Shopping,expense
+2025-11-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-11-07,ACME CORP PAYROLL,2350.00,Salary,income
+2025-11-07,DISCORD* NITRO,9.99,Entertainment,expense
+2025-11-08,AMAZON.COM*2K4LP,127.15,Shopping,expense
+2025-11-09,UBER *TRIP,8.71,Transport,expense
+2025-11-10,DUNKIN #348291,5.49,Food & dining,expense
+2025-11-10,WAL-MART SUPERCENTER,28.93,Food & dining,expense
+2025-11-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-11-11,SHELL OIL 574412,50.86,Transport,expense
+2025-11-12,DUNKIN #348291,4.89,Food & dining,expense
+2025-11-13,DUNKIN #348291,5.49,Food & dining,expense
+2025-11-13,KROGER #512,119.95,Food & dining,expense
+2025-11-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-11-14,SPEEDWAY 8827,53.40,Transport,expense
+2025-11-16,DUNKIN #348291,4.89,Food & dining,expense
+2025-11-16,SPEEDWAY 8827,48.44,Transport,expense
+2025-11-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-11-18,DUNKIN #348291,4.89,Food & dining,expense
+2025-11-19,DUKE ENERGY BILL PAY,178.22,Bills & utilities,expense
+2025-11-19,DUNKIN #348291,5.49,Food & dining,expense
+2025-11-19,SPEEDWAY 8827,33.22,Transport,expense
+2025-11-21,ACME CORP PAYROLL,2350.00,Salary,income
+2025-11-21,DUNKIN #348291,5.49,Food & dining,expense
+2025-11-24,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-11-24,HOME DEPOT #4107,35.46,Shopping,expense
+2025-11-25,ATT*BILL PAYMENT,85.66,Bills & utilities,expense
+2025-11-25,KROGER #512,77.69,Food & dining,expense
+2025-11-27,STARBUCKS STORE 1182,9.07,Food & dining,expense
+2025-11-27,UBER *TRIP,26.81,Transport,expense
+2025-11-28,OLIVE GARDEN 0412,13.72,Food & dining,expense
+2025-12-01,DUNKIN #348291,5.49,Food & dining,expense
+2025-12-01,NAVY FEDERAL INS AUTO,151.90,Bills & utilities,expense
+2025-12-03,HULU 877-8244858 CA,17.99,Entertainment,expense
+2025-12-05,ACME CORP PAYROLL,2350.00,Salary,income
+2025-12-05,CHIPOTLE 2210,20.56,Food & dining,expense
+2025-12-05,DUNKIN #348291,5.49,Food & dining,expense
+2025-12-05,PLANET FITNESS CLUB FEE,24.99,Health,expense
+2025-12-06,DISCORD* NITRO,9.99,Entertainment,expense
+2025-12-06,DUNKIN #348291,5.49,Food & dining,expense
+2025-12-10,MISTER CAR WASH #112,18.00,Transport,expense
+2025-12-10,PANERA BREAD #2201,42.64,Food & dining,expense
+2025-12-11,APPLE.COM/BILL ICLOUD,2.99,Other,expense
+2025-12-12,TACO BELL 031,14.88,Food & dining,expense
+2025-12-13,DOORDASH*ORDER,16.07,Food & dining,expense
+2025-12-13,DUNKIN #348291,5.49,Food & dining,expense
+2025-12-14,DUNKIN #348291,5.49,Food & dining,expense
+2025-12-14,NETFLIX.COM 866-579-7172 CA,17.99,Entertainment,expense
+2025-12-15,DUNKIN #348291,4.89,Food & dining,expense
+2025-12-15,PANERA BREAD #2201,11.77,Food & dining,expense
+2025-12-16,DOORDASH*ORDER,13.32,Food & dining,expense
+2025-12-16,STARBUCKS STORE 1182,7.78,Food & dining,expense
+2025-12-17,SPOTIFY USA,12.99,Entertainment,expense
+2025-12-17,STARBUCKS STORE 1182,8.86,Food & dining,expense
+2025-12-18,DUKE ENERGY BILL PAY,106.52,Bills & utilities,expense
+2025-12-19,ACME CORP PAYROLL,2350.00,Salary,income
+2025-12-20,OLIVE GARDEN 0412,30.34,Food & dining,expense
+2025-12-21,STARBUCKS STORE 1182,8.78,Food & dining,expense
+2025-12-22,AMAZON.COM*2K4LP,52.69,Shopping,expense
+2025-12-22,"GITHUB, INC. SAN FRANCISCO CA",4.00,Other,expense
+2025-12-22,KROGER #512,44.79,Food & dining,expense
+2025-12-23,DUNKIN #348291,5.49,Food & dining,expense
+2025-12-23,UBER *TRIP,10.75,Transport,expense
+2025-12-25,ATT*BILL PAYMENT,86.32,Bills & utilities,expense
+2025-12-26,SPEEDWAY 8827,46.00,Transport,expense
+2025-12-26,WAL-MART SUPERCENTER,128.12,Food & dining,expense
+2025-12-27,DUNKIN #348291,5.49,Food & dining,expense
+2025-12-29,AMAZON.COM*2K4LP,68.42,Shopping,expense
+2025-12-29,CHIPOTLE 2210,32.40,Food & dining,expense
+2025-12-29,DUNKIN #348291,5.49,Food & dining,expense
+2025-12-31,BEST BUY 00381,38.12,Shopping,expense
+2025-12-31,DUNKIN #348291,5.49,Food & dining,expense

@@ -1,13 +1,15 @@
-# Spending Snapshot
+# Rocket Power
 
-A personal finance app for one user. Import or add transactions, see where your money goes, and spot recurring subscriptions. Everything runs in the browser, and data never leaves your machine.
+A personal finance app for one user. Import your bank CSV, see where your money goes, and spot recurring subscriptions. Everything runs in the browser, and data never leaves your machine.
 
 ## Features
 
 - **Dashboard**: income vs. expenses for the selected month and a spending-by-category donut chart.
-- **Possible subscriptions**: scans the whole selected year for similar charges at regular intervals (weekly, biweekly, monthly, quarterly) and estimates the next date.
-- **Transactions**: add, edit, delete, search, and filter by type or category.
-- **CSV import**: upload a bank export (see below).
+- **Subscriptions**: scans the whole selected year for similar charges at regular intervals (weekly, biweekly, monthly, quarterly). Shows your total monthly and yearly cost, then each subscription with its charge, monthly equivalent, and last charge date, biggest first. Yearly subscriptions are not detected yet.
+  - On screens 1024px and wider, the card matches the height of the summary column and shows the rows that fit, with a "+N more" button to show every row (and "Show fewer" to go back).
+  - Below 1024px it is a collapsed accordion; the totals stay visible and "Show all" reveals the list.
+- **Transactions**: search, filter by type or category (the category filter lists the categories in the selected month), and change a transaction's category with the pencil button. Other fields can't be edited and transactions can't be deleted or added by hand.
+- **CSV import**: the only way to add data. Upload a bank export (see below).
 - **Local persistence**: transactions are stored in `localStorage`. Unreadable saved data is never overwritten.
 - **Light and dark themes**: follows the browser preference. In development, a button in the bottom-right corner toggles the theme.
 
@@ -38,6 +40,7 @@ Open http://localhost:5173.
 | `npm test` | Run the test suite once |
 | `npm run test:watch` | Run tests in watch mode |
 | `npm run coverage` | Run tests with coverage (HTML report in `coverage/`) |
+| `npm run fixtures:generate` | Regenerate the fake two-year CSV and its answer key |
 
 ## CSV import
 
@@ -55,6 +58,13 @@ The first row must be a header. Column names are case-insensitive.
 - Amounts are stored as positive values. Values in parentheses count as negative.
 - Quote amounts that contain commas, e.g. `"1,234.50"`.
 - A file with any invalid row is rejected, so nothing is partially imported.
+- Columns that aren't listed above are ignored.
+
+## Testing subscription detection
+
+`scripts/generate-fake-transactions.mjs` creates a seeded, deterministic two-year CSV (`test/fixtures/fake-transactions.csv`) with known subscriptions (Netflix, Hulu, GitHub, Discord, AT&T, car insurance, and others), filler spending, and decoys that should not be detected (daily coffee, car washes, one-off purchases). `test/fixtures/fake-subscriptions.json` is the answer key, and `app/lib/subscriptions.fixture.test.ts` scores detection against it. You can also import the fake CSV in the app to try it out.
+
+When detection misses or misreads something in your real data, add a similar case to the generator and tune `findRecurringPayments` until the fixture test passes.
 
 ## Project structure
 
@@ -62,10 +72,13 @@ The first row must be a header. Column names are case-insensitive.
 app/
   routes/home.tsx            Dashboard and transactions UI
   lib/transactions.ts        Types, validation, storage, CSV import, subscription detection
+  lib/subscriptions.fixture.test.ts  Scores detection against the fake data
   components/theme-toggle.tsx  Theme init script and dev toggle
   components/ui/             shadcn/ui components
   root.tsx                   Layout and error boundary
   app.css                    Design tokens and light/dark palettes
+scripts/                     Fake data generator
+test/fixtures/               Fake CSV and subscription answer key
 test/setup.ts                Vitest setup (jest-dom, jsdom stubs)
 ```
 
