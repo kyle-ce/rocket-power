@@ -1,4 +1,4 @@
-export const STORAGE_KEY = "spending-snapshot-transactions-v1";
+export const STORAGE_KEY = "rocket-power-transactions-v1";
 
 export const EXPENSE_CATEGORIES = [
   "Food & dining",

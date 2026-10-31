@@ -86,4 +86,4 @@ Tests live next to the code as `*.test.ts(x)`. Generated shadcn components and `
 
 ## Data and privacy
 
-Transactions are saved in your browser under the `spending-snapshot-transactions-v1` key. Clearing site data deletes them, and they are not synced between browsers or devices.
+Transactions are saved in your browser under the `rocket-power-transactions-v1` key. Clearing site data deletes them, and they are not synced between browsers or devices.

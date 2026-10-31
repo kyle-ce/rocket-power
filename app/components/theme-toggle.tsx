@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "~/components/ui/button";
 
-export const THEME_OVERRIDE_KEY = "spending-snapshot-theme-override";
+export const THEME_OVERRIDE_KEY = "rocket-power-theme-override";
 
 // Runs before first paint: follow the browser preference unless a dev override is set.
 export const themeInitScript = `(function(){var m=matchMedia("(prefers-color-scheme: dark)");var r=document.documentElement;function a(){var o=null;try{o=localStorage.getItem("${THEME_OVERRIDE_KEY}")}catch(e){}r.dataset.theme=o==="light"||o==="dark"?o:m.matches?"dark":"light"}a();m.addEventListener("change",a)})();`;
