@@ -11,7 +11,6 @@ import type { Route } from "./+types/home";
 import {
   ArrowDownRight,
   ArrowUpRight,
-  CalendarDays,
   ChevronDown,
   Pencil,
   ReceiptText,
@@ -19,6 +18,7 @@ import {
   Search,
   Upload,
 } from "lucide-react";
+import { MonthPicker } from "~/components/month-picker";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import {
@@ -327,21 +327,7 @@ export default function Home() {
               Rocket Power
             </span>
           </div>
-          <label className="relative min-w-0 shrink-0">
-            {/* <CalendarDays className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" /> */}
-            <Input
-              type="month"
-              aria-label="Select month"
-              value={selectedMonth}
-              onClick={(event) => {
-                if (typeof event.currentTarget.showPicker === "function") {
-                  event.currentTarget.showPicker();
-                }
-              }}
-              onChange={(event) => setSelectedMonth(event.target.value)}
-              className="h-9 w-40 sm:w-44"
-            />
-          </label>
+          <MonthPicker value={selectedMonth} onChange={setSelectedMonth} />
         </div>
       </header>
 

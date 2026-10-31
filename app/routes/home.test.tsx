@@ -92,9 +92,13 @@ describe("Home dashboard", () => {
     render(<Home />);
     expect(await screen.findByText("This month")).toBeInTheDocument();
 
-    fireEvent.change(screen.getByLabelText("Select month"), {
-      target: { value: "2020-03" },
-    });
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("button", { name: "Select month" }));
+    const current = Number(month.slice(0, 4));
+    for (let year = current; year > 2020; year--) {
+      await user.click(screen.getByRole("button", { name: "Previous year" }));
+    }
+    await user.click(screen.getByRole("button", { name: "Mar" }));
 
     expect(screen.getByText("Old purchase")).toBeInTheDocument();
     expect(screen.queryByText("This month")).not.toBeInTheDocument();
@@ -102,23 +106,18 @@ describe("Home dashboard", () => {
     expect(screen.getByText(/March 2020/, { selector: "p" })).toBeInTheDocument();
   });
 
-  it("opens the native month picker on click when supported", async () => {
+  it("marks the selected month and moves between years", async () => {
+    const user = userEvent.setup();
     render(<Home />);
-    const input = await screen.findByLabelText("Select month");
-    const showPicker = vi.fn();
-    Object.defineProperty(input, "showPicker", { value: showPicker, configurable: true });
+    await user.click(await screen.findByRole("button", { name: "Select month" }));
 
-    await userEvent.click(input);
+    const monthIndex = Number(month.slice(5, 7)) - 1;
+    const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    expect(screen.getByRole("button", { name: labels[monthIndex] })).toHaveAttribute("aria-pressed", "true");
 
-    expect(showPicker).toHaveBeenCalled();
-  });
-
-  it("does not fail when showPicker is unavailable", async () => {
-    render(<Home />);
-    const input = await screen.findByLabelText("Select month");
-    Object.defineProperty(input, "showPicker", { value: undefined, configurable: true });
-
-    await expect(userEvent.click(input)).resolves.toBeUndefined();
+    await user.click(screen.getByRole("button", { name: "Next year" }));
+    expect(screen.getByText(String(Number(month.slice(0, 4)) + 1))).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: labels[monthIndex] })).toHaveAttribute("aria-pressed", "false");
   });
 
   it("lists detected subscriptions for the selected year", async () => {
