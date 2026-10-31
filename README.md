@@ -1,87 +1,76 @@
-# Welcome to React Router!
+# Spending Snapshot
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+A personal finance app for one user. Import or add transactions, see where your money goes, and spot recurring subscriptions. Everything runs in the browser, and data never leaves your machine.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **Dashboard**: income vs. expenses for the selected month and a spending-by-category donut chart.
+- **Possible subscriptions**: scans the whole selected year for similar charges at regular intervals (weekly, biweekly, monthly, quarterly) and estimates the next date.
+- **Transactions**: add, edit, delete, search, and filter by type or category.
+- **CSV import**: upload a bank export (see below).
+- **Local persistence**: transactions are stored in `localStorage`. Unreadable saved data is never overwritten.
+- **Light and dark themes**: follows the browser preference. In development, a button in the bottom-right corner toggles the theme.
 
-## Getting Started
+## Tech stack
 
-### Installation
+- [React Router](https://reactrouter.com/) in framework mode, SPA (`ssr: false`)
+- React, TypeScript, Vite
+- Tailwind CSS v4 and [shadcn/ui](https://ui.shadcn.com/) (Radix, Nova preset)
+- Vitest, Testing Library, and V8 coverage
 
-Install the dependencies:
+## Getting started
 
 ```bash
 npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Open http://localhost:5173.
 
-## Building for Production
+## Scripts
 
-Create a production build:
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the dev server with HMR |
+| `npm run build` | Create a production build in `build/` |
+| `npm start` | Serve the production build |
+| `npm run typecheck` | Generate route types and run `tsc` |
+| `npm test` | Run the test suite once |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run coverage` | Run tests with coverage (HTML report in `coverage/`) |
 
-```bash
-npm run build
-```
+## CSV import
 
-## Deployment
+The first row must be a header. Column names are case-insensitive.
 
-### Docker Deployment
+| Field | Accepted headers | Required |
+| --- | --- | --- |
+| Date | `date`, `postingdate`, `transactiondate` | Yes |
+| Description | `description`, `merchant`, `name` | Yes |
+| Amount | `amount`, `expense` | Yes |
+| Category | `category` | No (defaults to "Other") |
+| Type | `type`, `creditdebitindicator` | No (defaults to expense) |
 
-To build and run using Docker:
+- Dates can be `YYYY-MM-DD` or `M/D/YYYY`.
+- Amounts are stored as positive values. Values in parentheses count as negative.
+- Quote amounts that contain commas, e.g. `"1,234.50"`.
+- A file with any invalid row is rejected, so nothing is partially imported.
 
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## Project structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+app/
+  routes/home.tsx            Dashboard and transactions UI
+  lib/transactions.ts        Types, validation, storage, CSV import, subscription detection
+  components/theme-toggle.tsx  Theme init script and dev toggle
+  components/ui/             shadcn/ui components
+  root.tsx                   Layout and error boundary
+  app.css                    Design tokens and light/dark palettes
+test/setup.ts                Vitest setup (jest-dom, jsdom stubs)
 ```
 
-## Styling
+Tests live next to the code as `*.test.ts(x)`. Generated shadcn components and `app/routes.ts` are excluded from coverage.
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+## Data and privacy
 
----
-
-Built with ❤️ using React Router.
+Transactions are saved in your browser under the `spending-snapshot-transactions-v1` key. Clearing site data deletes them, and they are not synced between browsers or devices.

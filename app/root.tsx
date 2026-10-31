@@ -6,29 +6,19 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import type { ReactNode } from "react";
 
 import type { Route } from "./+types/root";
+import { ThemeToggle, themeInitScript } from "~/components/theme-toggle";
 import "./app.css";
 
-export const links: Route.LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  },
-];
-
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <Meta />
         <Links />
       </head>
@@ -42,34 +32,44 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <>
+      <Outlet />
+      {import.meta.env.DEV && <ThemeToggle />}
+    </>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
-
-  if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
-  }
+  const isNotFound = isRouteErrorResponse(error) && error.status === 404;
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
-          <code>{stack}</code>
-        </pre>
-      )}
+    <main className="flex min-h-screen items-center justify-center bg-background px-5">
+      <div className="max-w-md text-center">
+        <div className="mx-auto mb-5 flex size-12 items-center justify-center rounded-xl bg-emerald-600 text-white">
+          <span className="font-heading text-lg font-semibold">S</span>
+        </div>
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-400">Spending Snapshot</p>
+        <h1 className="mt-2 font-heading text-2xl font-semibold tracking-tight">
+          {isNotFound ? "Page not found" : "Something went wrong"}
+        </h1>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          {isNotFound
+            ? "We couldn’t find the page you were looking for."
+            : "We couldn’t load your snapshot. Try refreshing the page."}
+        </p>
+        <a
+          href="/"
+          className="mt-6 inline-flex h-9 items-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/80"
+        >
+          Back to dashboard
+        </a>
+        {import.meta.env.DEV && error instanceof Error && (
+          <pre className="mt-8 max-h-48 overflow-auto rounded-lg bg-muted p-3 text-left text-xs">
+            {error.message}
+          </pre>
+        )}
+      </div>
     </main>
   );
 }
